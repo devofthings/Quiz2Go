@@ -5,34 +5,30 @@
     "answerB": "B",
     "answerC": "C",
     "answerD": "D",
-    "correct": "answerA",
-    "buttons": 4
+    "correct": "answerA"
   },
   {
     "question": "test1",
     "answerA": "A",
     "answerB": "B",
     "answerC": "C",
-    "answerD": "",
-    "correct": "answerA",
-    "buttons": 3
+    "answerD": null,
+    "correct": "answerA"
   },
   {
     "question": "test2",
     "answerA": "A",
     "answerB": "B",
-    "answerC": "",
-    "answerD": "",
-    "correct": "answerA",
-    "buttons": 2
+    "answerC": null,
+    "answerD": null,
+    "correct": "answerA"
   },
   {
     "question": "test3",
     "answerA": "A",
-    "answerB": "",
-    "answerC": "",
-    "answerD": "",
-    "correct": "answerA",
-    "buttons": 1
+    "answerB": null,
+    "answerC": null,
+    "answerD": null,
+    "correct": "answerA"
   }
 ]
