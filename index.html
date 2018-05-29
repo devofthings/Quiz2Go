@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,24 +12,25 @@
     <script src="questions.js"></script>
     <script src="quiz.js"></script>
     <title>Editable Web Quiz</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <main role="main" class="container">
         <div class="jumbotron">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
             <p class="lead" id="subheadline">Welcome to the Editbale Web Quiz! Please set your configurations below.</p>
             <hr class="my-4">
-            <form id ="optionsForm">
+            <form id="optionsForm">
                 <div class="form-group row">
-                    <label for="rounds2play" class="col-sm-2 col-form-label">Rounds: </label>
+                    <label for="rounds2play" class="col-sm-2 col-form-label">Rounds to play: </label>
                     <div class="col-sm-10">
-                    <input type="number" min="1" max ="100" class="form-control" id="rounds2playForm" placeholder="How many rounds you want to play?">
+                        <input type="number" min="1" max="100" class="form-control" id="rounds2playForm" placeholder="How many rounds?">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="time2answer" class="col-sm-2 col-form-label">Time: </label>
+                    <label for="time2answer" class="col-sm-2 col-form-label">Time to answer: </label>
                     <div class="col-sm-10">
-                    <input type="number" min="1" max="60" class="form-control" id="time2answerForm" placeholder="How many seconds to answer per question?">
+                        <input type="number" min="1" max="60" class="form-control" id="time2answerForm" placeholder="How many seconds per question?">
                     </div>
                 </div>
                 <div class="card" style="width: 100%">
@@ -37,7 +39,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">the real magic happens here</h6>
                         <p class="card-text">By default you play a demo quiz, but you can create your own questions and play with them!</p>
                         <label for="uploadFile">Upload your own questions: </label>
-                        <input type="file" class="form-control-file-inline" id="uploadFile">
+                        <input type="file" class="form-control-file-inline" accept=".js" id="uploadFile">
                         <a href="#" class="card-link">Create your own questions</a>
                     </div>
                 </div>
@@ -72,8 +74,9 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">made with </> and <3 by saiij </span>
+            <span class="text-muted">made with < /> and <3 by saiij </span>
         </div>
-     </footer>
+    </footer>
 </body>
+
 </html>
