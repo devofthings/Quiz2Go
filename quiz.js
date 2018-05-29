@@ -7,51 +7,59 @@ var rounds2play;
 
 function newGame(){
     getOptionValues();
+    randomizeQuestions();
     createMatchfield();
     newRound();
-    console.log("New Game")
 }
 
-function getOptionValues(){ //Get the values from the HTML form
+function getOptionValues(){ //Get values from the HTML form
     var options = document.getElementById("optionsForm")
     rounds2play = options.elements[0].value;
     time2answer = options.elements[1].value;
-    console.log(time2answer);
-    console.log(rounds2play);
+}
+
+function randomizeQuestions(){
+    data.sort(function() {
+        return Math.random() - 0.5;
+    });
 }
 
 function createMatchfield(){
     //remove Form
     var form = document.getElementById("optionsForm");
-    form.parentNode.removeChild(form);
+    optionsForm.parentNode.removeChild(form);
     //remove headline text
-    var headline = document.getElementById("headline");
     headline.innerHTML = "";
     //remove subheadline text
-    var subheadline = document.getElementById("subheadline");
     subheadline.innerHTML = "";
-    
+    matchfield.style.display = "block";   
 }
 
 function newRound(){
-    console.log("New Round");
-    if(round < rounds2play){
+    if(round <= rounds2play){
         locked = false;
         round++;
+        setButtons(data[round]);
         timer();
+        resetButtons();
+        var question = data[round].question;
+        headline.innerHTML = "<center>" + question + "</center";
+        subheadline.innerHTML = "<center>Score: " + score + " Round: " + round +  " / " + rounds2play + "</center>";
+        
     }
-    else{
-    var subheadline = document.getElementById("subheadline");
-    subheadline.innerHTML = "<center>Game Over!<br> You've scored "+ score + " / " + rounds2play + " point(s).</center>";
-    }
+    else gameOver();
+}
+
+function gameOver(){
+    headline.innerHTML = "<center> Game Over! </center";
+    subheadline.innerHTML ="<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
 }
 
 function timer(){
     timeleft = time2answer;
     var progressbar = document.getElementById("progressbar");
     var timer = setInterval(function() {
-        console.log(timeleft);
-        progressbar.style.width = (100/time2answer)*timeleft + "%";
+        progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
         if(timeleft < 0) {
             clearInterval(timer);
@@ -60,12 +68,34 @@ function timer(){
     }, 1000);
 }
 
-function setButtons(){
-    
-}
-
-function resetButtons(){
-
+function setButtons(question){
+    if(question.answerA != null && question.answerB != null && question.answerC != null && question.answerD != null){
+        answerA.style.visibility = "visible";
+        answerB.style.visibility = "visible";
+        answerC.style.visibility = "visible";
+        answerD.style.visibility = "visible";
+    }
+    else if(question.answerB === null){
+        answerA.style.visibility = "visible";
+        answerB.style.visibility = "hidden";
+        answerC.style.visibility = "hidden";
+        answerD.style.visibility = "hidden";
+    }
+    else if(question.answerC === null){
+        answerA.style.visibility = "visible";
+        answerB.style.visibility = "visible";
+        answerD.style.visibility = "hidden";
+        answerC.style.visibility = "hidden";
+    }
+    else if(question.answerD === null){
+        answerA.style.visibility = "visible";
+        answerB.style.visibility = "visible";
+        answerC.style.visibility = "visible";
+        answerD.style.visibility = "hidden";
+    }
+    else{
+        alert("INVALID QUESTION!");
+    }
 }
 
 function clickButton(selectedAnswer){
@@ -73,11 +103,20 @@ function clickButton(selectedAnswer){
         return;
     }
     locked = true;
-    if(selectedAnswer.getAttribute("id") == correct){
+    if(selectedAnswer.getAttribute("id") === data[round].correct){
+        selectedAnswer.className = "btn btn-block btn-success";
         score++;
-        timeleft = 0;
+        timeleft = 1;
     }
     else{
-        timeleft = 0;
+        selectedAnswer.className = "btn btn-block btn-danger";
+        timeleft = 1;
     }
+}
+
+function resetButtons(){
+    answerA.className = "btn btn-outline-primary btn-block";
+    answerB.className = "btn btn-outline-primary btn-block";
+    answerC.className = "btn btn-outline-primary btn-block";
+    answerD.className = "btn btn-outline-primary btn-block";
 }
