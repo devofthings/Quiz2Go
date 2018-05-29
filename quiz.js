@@ -43,6 +43,10 @@ function newRound(){
         timer();
         resetButtons();
         var question = data[round].question;
+        answerA.innerHTML = data[round].answerA;
+        answerB.innerHTML = data[round].answerB;
+        answerC.innerHTML = data[round].answerC;
+        answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + round +  " / " + rounds2play + "</center>";
         
