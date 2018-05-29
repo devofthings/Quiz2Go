@@ -68,14 +68,11 @@ function newRound() {
 function gameOver() {
     headline.innerHTML = "<center> Game Over! </center";
     subheadline.innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
-    answerA.style.visibility = "hidden";
-    answerB.style.visibility = "hidden";
-    answerC.style.visibility = "hidden";
-    answerD.style.visibility = "hidden";
+    matchfield.style.display = "none";
     var newGameBtn = document.createElement("button");
     var t = document.createTextNode("New Game");
     newGameBtn.appendChild(t);
-    document.getElementById("matchfield").appendChild(newGameBtn);
+    document.getElementById("jumbo").appendChild(newGameBtn);
     newGameBtn.className = "btn btn-block btn-success"
     newGameBtn.id = "newGameBtn";
     newGameBtn.addEventListener("click", newGamePlus);
