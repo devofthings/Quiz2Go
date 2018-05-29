@@ -16,7 +16,7 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "What is the capital from Azerbaijan?",
+      "question": "What's the capital of Azerbaijan?",
       "answerA": "Baku",
       "answerB": "Baka",
       "answerC": null,

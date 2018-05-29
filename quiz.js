@@ -6,18 +6,24 @@ var time2answer;
 var rounds2play;
 
 function newGame(){
-    round = 0;
-    score = 0;
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
     newRound();
 }
 
+function newGamePlus(){
+    score = 0;
+    round = 0;
+    optionsForm.style.display = "initial";
+    matchfield.style.display = "none";
+    newGameBtn.parentNode.removeChild(newGameBtn);
+}
+
 function getOptionValues(){ //Get values from the HTML form
     var options = document.getElementById("optionsForm")
     if(options.elements[0].value > data.length){
-        alert("max. 1 round per question! I will fix it for you.");
+        alert("max. one round per question! I will fix it for you.");
         rounds2play = data.length;
     }
     else rounds2play = options.elements[0].value;
@@ -32,8 +38,7 @@ function randomizeQuestions(){
 
 function createMatchfield(){
     //remove Form
-    var form = document.getElementById("optionsForm");
-    optionsForm.parentNode.removeChild(form);
+    optionsForm.style.display = "none";
     //remove headline text
     headline.innerHTML = "";
     //remove subheadline text
@@ -43,7 +48,6 @@ function createMatchfield(){
 
 function newRound(){
     if(round < rounds2play){
-        console.log(round + " " + rounds2play)
         locked = false;
         resetButtons();
         setButtons(data[round]);
@@ -54,10 +58,10 @@ function newRound(){
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
-        subheadline.innerHTML = "<center>Score: " + score + " Round: " + round +  " / " + rounds2play + "</center>";
+        subheadline.innerHTML = "<center>Score: " + score + " Round: " + (round + 1) +  " / " + rounds2play + "</center>";
         
     }
-    else gameOver();document.getElementById("demo")
+    else gameOver();
 }
 
 function gameOver(){
@@ -72,7 +76,9 @@ function gameOver(){
     newGameBtn.appendChild(t);
     document.getElementById("matchfield").appendChild(newGameBtn);
     newGameBtn.className = "btn btn-block btn-success"
-    newGameBtn.onclick = newGame();
+    newGameBtn.id = "newGameBtn";
+    newGameBtn.addEventListener("click", newGamePlus);
+    
 }
 
 function timer(){
