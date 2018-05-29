@@ -6,6 +6,8 @@ var time2answer;
 var rounds2play;
 
 function newGame(){
+    round = 0;
+    score = 0;
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
@@ -14,7 +16,11 @@ function newGame(){
 
 function getOptionValues(){ //Get values from the HTML form
     var options = document.getElementById("optionsForm")
-    rounds2play = options.elements[0].value;
+    if(options.elements[0].value > data.length){
+        alert("max. 1 round per question! I will fix it for you.");
+        rounds2play = data.length;
+    }
+    else rounds2play = options.elements[0].value;
     time2answer = options.elements[1].value;
 }
 
@@ -36,12 +42,12 @@ function createMatchfield(){
 }
 
 function newRound(){
-    if(round <= rounds2play){
+    if(round < rounds2play){
+        console.log(round + " " + rounds2play)
         locked = false;
-        round++;
+        resetButtons();
         setButtons(data[round]);
         timer();
-        resetButtons();
         var question = data[round].question;
         answerA.innerHTML = data[round].answerA;
         answerB.innerHTML = data[round].answerB;
@@ -51,12 +57,22 @@ function newRound(){
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + round +  " / " + rounds2play + "</center>";
         
     }
-    else gameOver();
+    else gameOver();document.getElementById("demo")
 }
 
 function gameOver(){
     headline.innerHTML = "<center> Game Over! </center";
     subheadline.innerHTML ="<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
+    answerA.style.visibility = "hidden";
+    answerB.style.visibility = "hidden";
+    answerC.style.visibility = "hidden";
+    answerD.style.visibility = "hidden";
+    var newGameBtn = document.createElement("button");
+    var t = document.createTextNode("New Game");
+    newGameBtn.appendChild(t);
+    document.getElementById("matchfield").appendChild(newGameBtn);
+    newGameBtn.className = "btn btn-block btn-success"
+    newGameBtn.onclick = newGame();
 }
 
 function timer(){
@@ -67,6 +83,7 @@ function timer(){
         timeleft--;
         if(timeleft < 0) {
             clearInterval(timer);
+            round++;
             newRound();
         }
     }, 1000);
