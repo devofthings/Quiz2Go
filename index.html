@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <script src="questions.js"></script>
     <script src="quiz.js"></script>
@@ -18,7 +19,7 @@
     <main role="main" class="container-fluid">
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
-            <p class="lead" id="subheadline">Welcome to the Editbale Web Quiz! Please set your configurations below.</p>
+            <p class="lead" id="subheadline">Welcome to the Quiz! <br> Set your configurations below.</p>
             <hr class="my-4">
             <form id="optionsForm">
                 <div class="form-group row">
@@ -33,6 +34,11 @@
                         <input type="number" min="1" max="60" class="form-control" id="time2answerForm" placeholder="How many seconds per question?">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="btn btn-outline-dark btn-block" onclick="newGame()">Start Quiz!</div>
+                    </div>
+                </div>
                 <div class="card" style="width: 100%">
                     <div class="card-body">
                         <h5 class="card-title">Advanced Options</h5>
@@ -41,11 +47,6 @@
                         <label for="uploadFile">Upload your own questions: </label>
                         <input type="file" class="form-control-file-inline" accept=".js" id="uploadFile">
                         <a href="#" class="card-link">Create your own questions</a>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-12">
-                        <div class="btn btn-outline-dark btn-block" onclick="newGame()">Start Quiz!</div>
                     </div>
                 </div>
             </form>
