@@ -152,7 +152,10 @@ function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
     if(file){
     var reader = new FileReader();
+        reader.onload = function(e) { 
+            var rawContent = e.target.result;
+            data = JSON.parse(rawContent);
+        }
     reader.readAsText(file);
-    reader.onload = alert(reader.result);
     }
 }

@@ -9,14 +9,15 @@ _a editable mc quiz to learn for exams etc._
 - [x] **0.3** show actual round   
 - [x] **0.4** live countdown while the quiz is running   
 - [x] **0.5** external questions
-- [ ] **0.6** save/load/delete game    
+- [ ] **0.6** save/load/delete game **[dev]**    
 - [x] **0.7** create menu for rounds, time, questions and savegame **[dev]**
-- [ ] **0.8** option to upload questions to quiz **[dev]**   
+- [x] **0.8** option to upload questions to quiz   
 - [ ] **0.9** extra menu to create questions and answers for the quiz **[dev]**     
 - [ ] **1.0** make it fancy [css]
 
 #### ToDo:
 0.7 - add savegame option
+0.8 - fix random duplicate question
 
 
 ##### Legend:
