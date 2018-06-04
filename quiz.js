@@ -186,3 +186,13 @@ function deleteGame(){
     localStorage.removeItem("time2answer");
     localStorage.removeItem("round2play");
 }
+
+function createQuestions(){
+    document.getElementById("createQuestions").style.display = "block";
+    document.getElementById("optionsForm").style.display = "none";
+}
+
+function goBack(){
+    document.getElementById("createQuestions").style.display = "none";
+    document.getElementById("optionsForm").style.display = "block";
+}

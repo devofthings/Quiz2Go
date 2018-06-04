@@ -19,7 +19,10 @@
     <main role="main" class="container-fluid">
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
-            <p class="lead" id="subheadline">Welcome to the Quiz! <br> Set your configurations below.</p>
+            <p class="lead" id="subheadline">
+                Welcome to the Quiz!<br> 
+                Set your configurations below.
+            </p>
             <hr class="my-4">
             <form id="optionsForm">
                 <div class="form-group row">
@@ -55,7 +58,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <div class="btn btn-outline-info btn-block" onclick="newGame()">Create Questions</div>
+                                <div class="btn btn-outline-info btn-block" onclick="createQuestions()">Create Questions</div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -88,6 +91,60 @@
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="progressbar"></div>
                 </div>
             </div>
+            <div id="createQuestions">
+                <div class="card" style="width: 100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Questions</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">it's time to learn</h6>
+                        <p class="card-text">
+                            1. Write down your question.
+                            <br> 2. Write down 1-4 answers.
+                            <br> 3. Doubletap on the correct answer. (it should be green now)
+                            <br> 4. Double-Check everything.
+                            <br> 5. Click 'Add Question'.
+                            <br> (6.) Download your questions.
+                        </p>
+                        <div class="form-group row">
+                            <label for="createQuestion" class="col-sm-2 col-form-label">Question: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="createQuestion" placeholder="Insert Question here">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <input type="text" class="form-control btn-outline-info btn-block" id="createA" placeholder="Answer A" ondblclick="setCorrectAnswer()">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control btn-outline-info btn-block" id="createB" placeholder="Answer B" ondblclick="setCorrectAnswer()">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <input type="text" class="form-control btn-outline-info btn-block" id="createC" placeholder="Answer B" ondblclick="setCorrectAnswer()">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control btn-outline-info btn-block" id="createD" placeholder="Answer B" ondblclick="setCorrectAnswer()">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <div class="btn btn-info btn-block" onclick="createNextQuestion()"> Add Question </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <div class="btn btn-warning btn-block" onclick="downloadQuestions()">Download Questions</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <div class="btn btn-dark btn-block" onclick="goBack()">Back</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
     <footer class="footer">
