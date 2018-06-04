@@ -159,3 +159,30 @@ function uploadQuestions() {
     reader.readAsText(file);
     }
 }
+
+function saveGame(){
+    localStorage.setItem("score", score);
+    localStorage.setItem("round", round);
+    localStorage.setItem("timeleft", timeleft);
+    localStorage.setItem("locked", locked);
+    localStorage.setItem("time2answer", time2answer);
+    localStorage.setItem("round2play", rounds2play);
+}
+
+function loadGame(){
+    score = localStorage.score;
+    round = localStorage.round;
+    timeleft = localStorage.timeleft;
+    locked = localStorage.locked;
+    time2answer = localStorage.time2answer;
+    rounds2play = localStorage.rounds2play;
+}
+
+function deleteGame(){
+    localStorage.removeItem("score");
+    localStorage.removeItem("round");
+    localStorage.removeItem("timeleft");
+    localStorage.removeItem("locked");
+    localStorage.removeItem("time2answer");
+    localStorage.removeItem("round2play");
+}
