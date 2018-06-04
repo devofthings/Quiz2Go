@@ -102,8 +102,10 @@
                             <br> 3. Doubletap on the correct answer. (it should be green now)
                             <br> 4. Double-Check everything.
                             <br> 5. Click 'Add Question'.
-                            <br> (6.) Download your questions.
+                            <br> 6. Add more Questions.
+                            <br> 7. Download your questions.
                         </p>
+                        <form id="createQuestionsForm">
                         <div class="form-group row">
                             <label for="createQuestion" class="col-sm-2 col-form-label">Question: </label>
                             <div class="col-sm-10">
@@ -112,28 +114,28 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-6">
-                                <input type="text" class="form-control btn-outline-info btn-block" id="createA" placeholder="Answer A" ondblclick="setCorrectAnswer()">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createA" placeholder="Answer A" ondblclick="setCorrectAnswer(id)">
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control btn-outline-info btn-block" id="createB" placeholder="Answer B" ondblclick="setCorrectAnswer()">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createB" placeholder="Answer B" ondblclick="setCorrectAnswer(id)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-6">
-                                <input type="text" class="form-control btn-outline-info btn-block" id="createC" placeholder="Answer B" ondblclick="setCorrectAnswer()">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createC" placeholder="Answer C" ondblclick="setCorrectAnswer(id)">
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control btn-outline-info btn-block" id="createD" placeholder="Answer B" ondblclick="setCorrectAnswer()">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <div class="btn btn-info btn-block" onclick="createNextQuestion()"> Add Question </div>
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createD" placeholder="Answer D" ondblclick="setCorrectAnswer(id)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <div class="btn btn-warning btn-block" onclick="downloadQuestions()">Download Questions</div>
+                                    <div class="btn btn-info btn-block" onclick="createNextQuestion(createQuestion, createA, createB, createC, createD)"> Add Question </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <a class="btn btn-warning btn-block" id="a" onclick="downloadQuestions()">Download Questions</a>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -142,6 +144,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -153,4 +156,5 @@
         </div>
     </footer>
 </body>
+
 </html>

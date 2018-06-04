@@ -4,6 +4,9 @@ var timeleft = 0;
 var locked = true;
 var time2answer;
 var rounds2play;
+var createdQuestionsArr = [];
+var createdQuestions = 0;
+var createdCorrect;
 
 function newGame() {
     uploadQuestions();
@@ -94,25 +97,25 @@ function timer() {
 }
 
 function setButtons(question) {
-    if (question.answerA != null && question.answerB != null && question.answerC != null && question.answerD != null) {
+    if (question.answerA != "" && question.answerB != "" && question.answerC != "" && question.answerD != "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
         answerD.style.visibility = "visible";
     }
-    else if (question.answerB === null) {
+    else if (question.answerB === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
         answerD.style.visibility = "hidden";
     }
-    else if (question.answerC === null) {
+    else if (question.answerC === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerD.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
     }
-    else if (question.answerD === null) {
+    else if (question.answerD === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
@@ -196,3 +199,52 @@ function goBack(){
     document.getElementById("createQuestions").style.display = "none";
     document.getElementById("optionsForm").style.display = "block";
 }
+
+function setCorrectAnswer(selectedAnswer){
+    document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
+    createdCorrect = document.getElementById(selectedAnswer);
+    switch(selectedAnswer){
+        case("createA"):
+            createdCorrect = "answerA";
+            break;
+        case("createB"):
+            createdCorrect = "answerB";
+            break;
+        case("createC"):
+            createdCorrect = "answerC";
+            break;
+        case("createD"):
+            createdCorrect = "answerD";
+            break;
+        default:
+            break;
+    }
+}
+
+function createNextQuestion(){
+    var options = document.getElementById("createQuestionsForm");
+    createdQuestionsArr[createdQuestions] = JSON.stringify({"question":options.elements[0].value, "answerA":options.elements[1].value, "answerB":options.elements[2].value, "answerC":options.elements[3].value, "answerD":options.elements[4].value, "correct":createdCorrect});
+    createdQuestions++;
+    resetCreateQuestionForm();
+}
+
+function resetCreateQuestionForm(){
+    var options = document.getElementById("createQuestionsForm");
+    options.elements[0].value = "";
+    options.elements[1].value = "";
+    options.elements[2].value = "";
+    options.elements[3].value = "";
+    options.elements[4].value = "";
+    options.elements[0].value = "";
+    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+}
+
+function downloadQuestions() {
+    var a = document.getElementById("a");
+    var file = new Blob(["[" + createdQuestionsArr + "]"], {"text": "json"});
+    a.href = URL.createObjectURL(file);
+    a.download = "question.json";
+  }
