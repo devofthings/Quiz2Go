@@ -4,6 +4,7 @@ var timeleft = 0;
 var locked = true;
 var time2answer;
 var rounds2play;
+var loadedStats = false;
 var createdQuestionsArr = [];
 var createdQuestions = 0;
 var createdCorrect;
@@ -61,8 +62,10 @@ function newRound() {
         answerB.innerHTML = data[round].answerB;
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
+        round++;
         headline.innerHTML = "<center>" + question + "</center";
-        subheadline.innerHTML = "<center>Score: " + score + " Round: " + (round + 1) + " / " + rounds2play + "</center>";
+        subheadline.innerHTML = "<center>Score: " + score + " Round: " + round + " / " + rounds2play + "</center>";
+        
 
     }
     else gameOver();
@@ -90,32 +93,31 @@ function timer() {
         timeleft--;
         if (timeleft < 0) {
             clearInterval(timer);
-            round++;
             newRound();
         }
     }, 1000);
 }
 
 function setButtons(question) {
-    if (question.answerA != "" && question.answerB != "" && question.answerC != "" && question.answerD != "") {
+    if (question.answerA != null && question.answerB != null && question.answerC != null && question.answerD != null) {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
         answerD.style.visibility = "visible";
     }
-    else if (question.answerB === "") {
+    else if (question.answerB === null) {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
         answerD.style.visibility = "hidden";
     }
-    else if (question.answerC === "") {
+    else if (question.answerC === null) {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerD.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
     }
-    else if (question.answerD === "") {
+    else if (question.answerD === null) {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
@@ -153,27 +155,30 @@ function resetButtons() {
 
 function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
-    if(file){
-    var reader = new FileReader();
-        reader.onload = function(e) { 
+    if (file) {
+        var reader = new FileReader();
+        data = "";
+        reader.onload = function (e) {
             var rawContent = e.target.result;
             data = JSON.parse(rawContent);
         }
-    reader.readAsText(file);
+        reader.readAsText(file);
     }
 }
 
-function saveGame(){
+function saveGame() {
     localStorage.setItem("score", score);
-    localStorage.setItem("round", round);
+    localStorage.setItem("round", round-1);
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
     localStorage.setItem("round2play", rounds2play);
 }
 
-function loadGame(){
+function loadGame() {
+    loadedStats = true;
     score = localStorage.score;
+    round = 0;
     round = localStorage.round;
     timeleft = localStorage.timeleft;
     locked = localStorage.locked;
@@ -181,7 +186,7 @@ function loadGame(){
     rounds2play = localStorage.rounds2play;
 }
 
-function deleteGame(){
+function deleteGame() {
     localStorage.removeItem("score");
     localStorage.removeItem("round");
     localStorage.removeItem("timeleft");
@@ -190,30 +195,30 @@ function deleteGame(){
     localStorage.removeItem("round2play");
 }
 
-function createQuestions(){
+function createQuestions() {
     document.getElementById("createQuestions").style.display = "block";
     document.getElementById("optionsForm").style.display = "none";
 }
 
-function goBack(){
+function goBack() {
     document.getElementById("createQuestions").style.display = "none";
     document.getElementById("optionsForm").style.display = "block";
 }
 
-function setCorrectAnswer(selectedAnswer){
+function setCorrectAnswer(selectedAnswer) {
     document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
     createdCorrect = document.getElementById(selectedAnswer);
-    switch(selectedAnswer){
-        case("createA"):
+    switch (selectedAnswer) {
+        case ("createA"):
             createdCorrect = "answerA";
             break;
-        case("createB"):
+        case ("createB"):
             createdCorrect = "answerB";
             break;
-        case("createC"):
+        case ("createC"):
             createdCorrect = "answerC";
             break;
-        case("createD"):
+        case ("createD"):
             createdCorrect = "answerD";
             break;
         default:
@@ -221,14 +226,14 @@ function setCorrectAnswer(selectedAnswer){
     }
 }
 
-function createNextQuestion(){
+function createNextQuestion() {
     var options = document.getElementById("createQuestionsForm");
-    createdQuestionsArr[createdQuestions] = JSON.stringify({"question":options.elements[0].value, "answerA":options.elements[1].value, "answerB":options.elements[2].value, "answerC":options.elements[3].value, "answerD":options.elements[4].value, "correct":createdCorrect});
+    createdQuestionsArr[createdQuestions] = JSON.stringify({ "question": options.elements[0].value, "answerA": options.elements[1].value, "answerB": options.elements[2].value, "answerC": options.elements[3].value, "answerD": options.elements[4].value, "correct": createdCorrect });
     createdQuestions++;
     resetCreateQuestionForm();
 }
 
-function resetCreateQuestionForm(){
+function resetCreateQuestionForm() {
     var options = document.getElementById("createQuestionsForm");
     options.elements[0].value = "";
     options.elements[1].value = "";
@@ -244,7 +249,7 @@ function resetCreateQuestionForm(){
 
 function downloadQuestions() {
     var a = document.getElementById("a");
-    var file = new Blob(["[" + createdQuestionsArr + "]"], {"text": "json"});
+    var file = new Blob(["[" + createdQuestionsArr + "]"], { "text": "json" });
     a.href = URL.createObjectURL(file);
     a.download = "question.json";
-  }
+}

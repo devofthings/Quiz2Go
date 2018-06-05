@@ -13,11 +13,12 @@ _a editable mc quiz to learn for exams etc._
 - [x] **0.7** create menu for rounds, time, questions and savegame
 - [x] **0.8** option to upload questions to quiz   
 - [x] **0.9** extra menu to create questions and answers for the quiz      
-- [ ] **1.0** make it fancy [css]**[dev]**   
+- [ ] **1.0** make it fancy [css] **[dev]**   
 
-#### ToDo:
-0.8 - fix random duplicate question
-
+#### ToDo:   
+make it DAU-proof   
+better comments
+add better readme
 
 ##### Legend:
 
