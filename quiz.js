@@ -10,6 +10,11 @@ var createdQuestions = 0;
 var createdCorrect;
 
 function newGame() {
+    var options = document.getElementById("optionsForm");
+    if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
+        alert("Please set your configurations");
+        return;
+    }
     uploadQuestions();
     getOptionValues();
     randomizeQuestions();
@@ -26,9 +31,9 @@ function newGamePlus() {
 }
 
 function getOptionValues() { //Get values from the HTML form
-    var options = document.getElementById("optionsForm")
+    var options = document.getElementById("optionsForm");
     if (options.elements[0].value > data.length) {
-        alert("max. one round per question! I will fix it for you.");
+        alert("max one round per question! I will fix it for you.");
         rounds2play = data.length;
     }
     else rounds2play = options.elements[0].value;
@@ -62,7 +67,6 @@ function newRound() {
         answerB.innerHTML = data[round].answerB;
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
-        round++;
         headline.innerHTML = "<center>" + question + "</center";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + round + " / " + rounds2play + "</center>";
     }
@@ -90,10 +94,8 @@ function timer() {
         progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
         if (timeleft < 0) {
-            if(data.length === round){
-                return;
-            }
             clearInterval(timer);
+            round++;
             newRound();
         }
     }, 1000);
