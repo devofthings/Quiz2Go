@@ -65,8 +65,6 @@ function newRound() {
         round++;
         headline.innerHTML = "<center>" + question + "</center";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + round + " / " + rounds2play + "</center>";
-        
-
     }
     else gameOver();
 }
@@ -92,6 +90,9 @@ function timer() {
         progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
         if (timeleft < 0) {
+            if(data.length === round){
+                return;
+            }
             clearInterval(timer);
             newRound();
         }
@@ -99,25 +100,25 @@ function timer() {
 }
 
 function setButtons(question) {
-    if (question.answerA != null && question.answerB != null && question.answerC != null && question.answerD != null) {
+    if (question.answerA !== "" && question.answerB !== "" && question.answerC !== "" && question.answerD !== "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
         answerD.style.visibility = "visible";
     }
-    else if (question.answerB === null) {
+    else if (question.answerB === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
         answerD.style.visibility = "hidden";
     }
-    else if (question.answerC === null) {
+    else if (question.answerC === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerD.style.visibility = "hidden";
         answerC.style.visibility = "hidden";
     }
-    else if (question.answerD === null) {
+    else if (question.answerD === "") {
         answerA.style.visibility = "visible";
         answerB.style.visibility = "visible";
         answerC.style.visibility = "visible";
@@ -168,7 +169,7 @@ function uploadQuestions() {
 
 function saveGame() {
     localStorage.setItem("score", score);
-    localStorage.setItem("round", round-1);
+    localStorage.setItem("round", round - 1);
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
@@ -206,6 +207,7 @@ function goBack() {
 }
 
 function setCorrectAnswer(selectedAnswer) {
+    resetCorrectAnswer();
     document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
     createdCorrect = document.getElementById(selectedAnswer);
     switch (selectedAnswer) {
@@ -226,11 +228,34 @@ function setCorrectAnswer(selectedAnswer) {
     }
 }
 
+function resetCorrectAnswer(){
+    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+}
+
 function createNextQuestion() {
+    if (createdQuestions >= 0) {
+        document.getElementById("a").className = "btn btn-warning btn-block";
+    }
+
     var options = document.getElementById("createQuestionsForm");
-    createdQuestionsArr[createdQuestions] = JSON.stringify({ "question": options.elements[0].value, "answerA": options.elements[1].value, "answerB": options.elements[2].value, "answerC": options.elements[3].value, "answerD": options.elements[4].value, "correct": createdCorrect });
-    createdQuestions++;
-    resetCreateQuestionForm();
+    if (options.elements[0].value != "" && options.elements[1].value != "") {
+        createdQuestionsArr[createdQuestions] = JSON.stringify({ "question": options.elements[0].value, "answerA": options.elements[1].value, "answerB": options.elements[2].value, "answerC": options.elements[3].value, "answerD": options.elements[4].value, "correct": createdCorrect });
+        createdQuestionsArr[createdQuestions].replace("", "");
+        createdQuestions++;
+        resetCreateQuestionForm();
+    }
+    else if (options.elements[0].value === "") {
+        alert("Please enter a question!");
+    }
+    else if (options.elements[1].value === "") {
+        alert("You need at least one answer. Start with 'Answer A'.");
+    }
+    else {
+        alert("Dafuq did you do? Please consider opening an issue on GitHub.");
+    }
 }
 
 function resetCreateQuestionForm() {

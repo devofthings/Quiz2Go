@@ -12,23 +12,23 @@ data = [
       "answerA": "43 mio",
       "answerB": "110 mio",
       "answerC": "67 mio",
-      "answerD": null,
+      "answerD": "",
       "correct": "answerC"
     },
     {
       "question": "What's the capital of Azerbaijan?",
       "answerA": "Baku",
       "answerB": "Baka",
-      "answerC": null,
-      "answerD": null,
+      "answerC": "",
+      "answerD": "",
       "correct": "answerA"
     },
     {
       "question": "This quiz is...",
       "answerA": "awesome ;)",
-      "answerB": null,
-      "answerC": null,
-      "answerD": null,
+      "answerB": "",
+      "answerC": "",
+      "answerD": "",
       "correct": "answerA"
     }
   ];
