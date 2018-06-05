@@ -173,6 +173,7 @@ function uploadQuestions() {
             return;
         }
     }
+    newGame();
 }
 
 function saveGame() {
