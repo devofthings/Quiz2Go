@@ -15,7 +15,6 @@ function newGame() {
         alert("Please set your configurations");
         return;
     }
-    uploadQuestions();
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
@@ -159,13 +158,20 @@ function resetButtons() {
 function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
     if (file) {
-        var reader = new FileReader();
-        data = "";
-        reader.onload = function (e) {
-            var rawContent = e.target.result;
-            data = JSON.parse(rawContent);
+        if(file.name.endsWith(".json")){
+            var reader = new FileReader();
+            data = "";
+            reader.onload = function (e) {
+                var rawContent = e.target.result;
+                data = JSON.parse(rawContent);
+            }
+            reader.readAsText(file);
+            newGame();
         }
-        reader.readAsText(file);
+        else{
+            alert("Upload your downloaded questions or another .json file please.");
+            return;
+        }
     }
 }
 
@@ -243,9 +249,8 @@ function createNextQuestion() {
     }
 
     var options = document.getElementById("createQuestionsForm");
-    if (options.elements[0].value != "" && options.elements[1].value != "") {
+    if (options.elements[0].value !== "" && options.elements[1].value !== "" && createdCorrect !== undefined) {
         createdQuestionsArr[createdQuestions] = JSON.stringify({ "question": options.elements[0].value, "answerA": options.elements[1].value, "answerB": options.elements[2].value, "answerC": options.elements[3].value, "answerD": options.elements[4].value, "correct": createdCorrect });
-        createdQuestionsArr[createdQuestions].replace("", "");
         createdQuestions++;
         resetCreateQuestionForm();
     }
@@ -254,6 +259,9 @@ function createNextQuestion() {
     }
     else if (options.elements[1].value === "") {
         alert("You need at least one answer. Start with 'Answer A'.");
+    }
+    else if(createdCorrect === undefined) {
+        alert("You still need to select an correct answer.");
     }
     else {
         alert("Dafuq did you do? Please consider opening an issue on GitHub.");
