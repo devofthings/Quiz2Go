@@ -5,18 +5,19 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <script src="demo.js"></script>
-    <script src="quiz.js"></script>
+    <!-- Bootstrap CSS by Bootstrap (https://github.com/twbs/bootstrap) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/demo.js"></script>
+    <script src="js/quiz.js"></script>
     <title>Editable Web Quiz</title>
 </head>
 
-<body>
+<body id="particles-js">
     <main class="container-fluid">
+        <!--particle.js by Vincent Garreau (https://github.com/VincentGarreau/particles.js)-->
+        <script src="js/particles.min.js"></script>
+        <script src="js/particles-config.js"></script>
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
             <p class="lead" id="subheadline">
@@ -54,7 +55,7 @@
                         <p class="card-text">By default you play a demo quiz, but you can create your own questions and play with them!</p>                        
                         <div class="form-group row">
                             <label class="col-sm-12" for="uploadFile">Upload your own questions: </label>
-                            <input type="file" class="form-control-file-inline col-sm-12"  id="uploadFile">
+                            <input type="file" class="form-control-file-inline col-sm-12" id="uploadFile">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
