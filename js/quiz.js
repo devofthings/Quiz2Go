@@ -56,6 +56,7 @@ function createMatchfield() {
 }
 
 function newRound() {
+    console.log(round);
     if (round < rounds2play) {
         locked = false;
         resetButtons();
@@ -67,7 +68,7 @@ function newRound() {
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
-        subheadline.innerHTML = "<center>Score: " + score + " Round: " + round + " / " + rounds2play + "</center>";
+        subheadline.innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
     }
     else gameOver();
 }
@@ -169,7 +170,7 @@ function uploadQuestions() {
             newGame();
         }
         else{
-            alert("Upload your downloaded questions or another .json file please.");
+            alert("Upload your downloaded questions or another valid .json file please.");
             return;
         }
     }
@@ -178,7 +179,7 @@ function uploadQuestions() {
 
 function saveGame() {
     localStorage.setItem("score", score);
-    localStorage.setItem("round", round - 1);
+    localStorage.setItem("round", round + 1);
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
@@ -188,8 +189,7 @@ function saveGame() {
 function loadGame() {
     loadedStats = true;
     score = localStorage.score;
-    round = 0;
-    round = localStorage.round;
+    round = localStorage.round - 1;
     timeleft = localStorage.timeleft;
     locked = localStorage.locked;
     time2answer = localStorage.time2answer;

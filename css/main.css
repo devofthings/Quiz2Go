@@ -3,8 +3,7 @@ html {
     min-height: 100%;
 }
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
-  /*background-color: #f5f5f5;*/
+  margin-bottom: 2em; /* Margin bottom by footer height */
 }
 canvas {
   position: absolute;
