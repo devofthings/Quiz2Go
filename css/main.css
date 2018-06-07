@@ -45,11 +45,32 @@ canvas {
   line-height: 2em; /* Vertically center the text there */
   background-color: #333;
 }
+#alertWarning{
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+
+#alertError{
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class="container-fluid"] {
       width: 100%;
       margin: 0;
+  }
+  [id="headline"] {
+    font-size: 2em;
+  }
+  [id="subheadline"] {
+    font-size: 1em;
   }
 }
