@@ -33,14 +33,14 @@ function uploadQuestions() {
 function showWarning(message){ //create custom warning alert
     var alert = document.getElementById("alertWarning");
     alert.style.display = "block";
-    alert.innerHTML = "<strong>Warning!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    alert.innerHTML = "<center><strong>Warning!</strong> " + message + "</center";
     exit(); //break code to exit newGame()
 }
 
 function showError(message){ //create custom error alert
     var alert = document.getElementById("alertError");
     alert.style.display = "block";
-    alert.innerHTML = "<strong>Error!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    alert.innerHTML = "<center><strong>Error!</strong> " + message + "</center";
     exit(); //break code to exit newGame()
 }
 
@@ -256,6 +256,7 @@ function createNextQuestion() { //'hack' the link to look like abutton
 function setCorrectAnswer(selectedAnswer) {
     resetCorrectAnswer();
     document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
+    createdCorrect = undefined;
     createdCorrect = document.getElementById(selectedAnswer);
     switch (selectedAnswer) {
         case ("createA"):

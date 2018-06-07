@@ -45,21 +45,19 @@ canvas {
   line-height: 2em; /* Vertically center the text there */
   background-color: #333;
 }
-#alertWarning{
+.alert-warning{
   display: none;
   position: fixed;
   width: 100%;
   z-index: 9999;
 }
 
-#alertError{
+.alert-danger{
   display: none;
   position: fixed;
   width: 100%;
   z-index: 9999;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

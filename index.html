@@ -14,23 +14,16 @@
 </head>
 
 <body id="particles-js">
+    <!--ALERTS-->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertWarning">
+        <strong>Warning!</strong><p>You should check in on some of those fields below.</p>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertError">
+        <strong>Error!</strong> You should check in on some of those fields below.
+    </div>
     <main class="container-fluid">
         <script src="js/particles.min.js"></script>
         <script src="js/particles-config.js"></script>
-
-        <!--ALERTS-->
-        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertWarning">
-            <strong>Warning!</strong><p>You should check in on some of those fields below.</p>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertError">
-            <strong>Error!</strong> You should check in on some of those fields below.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
             <p class="lead" id="subheadline">
