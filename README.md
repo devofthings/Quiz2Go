@@ -22,7 +22,7 @@ At this moment your questions will load and you can learn for everything.
 ## Screenshots
 ![Ingame Desktop](img/ingame_desktop.png)      
 ![Menu Desktop](img/menu_desktop.png)   
-![Menu Mobile](img/menu_mobile.png)   
+![Menu Mobile](img/menu_mobile_w_custom_alert.png)   
 
 ## Built With
 
