@@ -1,28 +1,34 @@
-# Editable-Web-Quiz
+# The Editable Web Quiz
 
-_a editable mc quiz to learn for exams etc._
+_a editable quiz based on javascript to learn for everything.
+for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
 
-## Roadmap:
+## Features
+You can select the rounds to play,
+the time you have to answer per question in seconds and it's also possible to upload and even create your own questions with ease. You can also save, load and delete your stats.
 
-- [x] **0.1** quiz is working   
-- [x] **0.2** show actual score   
-- [x] **0.3** show actual round   
-- [x] **0.4** live countdown while the quiz is running   
-- [x] **0.5** external questions
-- [x] **0.6** save/load/delete game    
-- [x] **0.7** create menu for rounds, time, questions and savegame
-- [x] **0.8** option to upload questions to quiz   
-- [x] **0.9** extra menu to create questions and answers for the quiz      
-- [ ] **1.0** make it fancy [css] **[dev]**   
+### Create and download your own Question
 
-#### ToDo:    
-better comments
-add better readme
+To create your own questions you click on the 'Create Question' button.
+Type in a question and at least one answer and then select the correct answer with a double tap. As next, you click on the 'Add Question' button to save the question.
+If you have at least one question saved the download button becomes enabled and you can download your questions.
 
-##### Legend:
+### Use your own questions
 
-1. - [ ] = still nothing
+To use your own questions you just need to select them via the 'Browse...'-button.
+Then you set up the rounds to play and time to answer fields and click on 'New Game'.
+At this moment your questions will load and you can learn for everything.
 
-2. **[dev]** = work in progress
+## Built With
 
-3. - [X] = finished / working
+[Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.
+[particle.js](https://github.com/VincentGarreau/particles.js) - A lightweight JavaScript library for creating particles
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with useful random knowledge.
+

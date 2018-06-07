@@ -9,10 +9,46 @@ var createdQuestionsArr = [];
 var createdQuestions = 0;
 var createdCorrect;
 
+function uploadQuestions() {
+    var file = document.getElementById('uploadFile').files[0];
+    if (file) {
+        if(file.name.endsWith(".json")){ //check if uploaded file is a .json file
+            var reader = new FileReader();
+            data = "";
+            reader.onload = function (e) {
+                var rawContent = e.target.result;
+                data = JSON.parse(rawContent);
+            }
+            reader.readAsText(file);
+            newGame();
+        }
+        else{
+            showError("Upload your downloaded questions or another valid .json file please.");
+            return;
+        }
+    }
+    newGame();
+}
+
+function showWarning(message){ //create custom warning alert
+    var alert = document.getElementById("alertWarning");
+    alert.style.display = "block";
+    alert.innerHTML = "<strong>Warning!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    exit(); //break code to exit newGame()
+}
+
+function showError(message){ //create custom error alert
+    var alert = document.getElementById("alertError");
+    alert.style.display = "block";
+    alert.innerHTML = "<strong>Error!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    exit(); //break code to exit newGame()
+}
+
 function newGame() {
     document.getElementById("alertWarning").style.display = "none";
     document.getElementById("alertError").style.display = "none";
     var options = document.getElementById("optionsForm");
+    //check if form values are valid
     if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
         showWarning("Please configure rounds to play & the time to answer with valid positive values > 0.");
         return;
@@ -21,14 +57,6 @@ function newGame() {
     randomizeQuestions();
     createMatchfield();
     newRound();
-}
-
-function newGamePlus() {
-    score = 0;
-    round = 0;
-    optionsForm.style.display = "initial";
-    matchfield.style.display = "none";
-    newGameBtn.parentNode.removeChild(newGameBtn);
 }
 
 function getOptionValues() { //Get values from the HTML form
@@ -75,32 +103,29 @@ function newRound() {
     else gameOver();
 }
 
-function gameOver() {
-    headline.innerHTML = "<center> Game Over! </center";
-    subheadline.innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
-    matchfield.style.display = "none";
-    var newGameBtn = document.createElement("button");
-    var t = document.createTextNode("New Game");
-    newGameBtn.appendChild(t);
-    document.getElementById("jumbo").appendChild(newGameBtn);
-    newGameBtn.className = "btn btn-block btn-success"
-    newGameBtn.id = "newGameBtn";
-    newGameBtn.addEventListener("click", newGamePlus);
-
+function clickButton(selectedAnswer) {
+    if (locked === true) {
+        return;
+    }
+    locked = true;
+    if (selectedAnswer.getAttribute("id") === data[round].correct) {
+        selectedAnswer.className = "btn btn-block btn-success";
+        score++;
+        timeleft = 1;
+    }
+    else {
+        selectedAnswer.className = "btn btn-block btn-danger";
+        var correctAnswer = document.getElementById(data[round].correct);
+        correctAnswer.className = "btn btn-block btn-success";
+        timeleft = 1;
+    }
 }
 
-function timer() {
-    timeleft = time2answer;
-    var progressbar = document.getElementById("progressbar");
-    var timer = setInterval(function () {
-        progressbar.style.width = (100 / time2answer) * timeleft + "%";
-        timeleft--;
-        if (timeleft < 0) {
-            clearInterval(timer);
-            round++;
-            newRound();
-        }
-    }, 1000);
+function resetButtons() {
+    answerA.className = "btn btn-outline-primary btn-block";
+    answerB.className = "btn btn-outline-primary btn-block";
+    answerC.className = "btn btn-outline-primary btn-block";
+    answerD.className = "btn btn-outline-primary btn-block";
 }
 
 function setButtons(question) {
@@ -133,50 +158,41 @@ function setButtons(question) {
     }
 }
 
-function clickButton(selectedAnswer) {
-    if (locked === true) {
-        return;
-    }
-    locked = true;
-    if (selectedAnswer.getAttribute("id") === data[round].correct) {
-        selectedAnswer.className = "btn btn-block btn-success";
-        score++;
-        timeleft = 1;
-    }
-    else {
-        selectedAnswer.className = "btn btn-block btn-danger";
-        var correctAnswer = document.getElementById(data[round].correct);
-        correctAnswer.className = "btn btn-block btn-success";
-        timeleft = 1;
-    }
+function timer() {
+    timeleft = time2answer;
+    var progressbar = document.getElementById("progressbar");
+    var timer = setInterval(function () {
+        progressbar.style.width = (100 / time2answer) * timeleft + "%";
+        timeleft--;
+        if (timeleft < 0) {
+            clearInterval(timer);
+            round++;
+            newRound();
+        }
+    }, 1000);
 }
 
-function resetButtons() {
-    answerA.className = "btn btn-outline-primary btn-block";
-    answerB.className = "btn btn-outline-primary btn-block";
-    answerC.className = "btn btn-outline-primary btn-block";
-    answerD.className = "btn btn-outline-primary btn-block";
+function gameOver() {
+    headline.innerHTML = "<center> Game Over! </center";
+    subheadline.innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
+    matchfield.style.display = "none";
+    var newGameBtn = document.createElement("button");
+    var t = document.createTextNode("New Game");
+    newGameBtn.appendChild(t);
+    document.getElementById("jumbo").appendChild(newGameBtn);
+    newGameBtn.className = "btn btn-block btn-success"
+    newGameBtn.id = "newGameBtn";
+    newGameBtn.addEventListener("click", newGamePlus);
+
 }
 
-function uploadQuestions() {
-    var file = document.getElementById('uploadFile').files[0];
-    if (file) {
-        if(file.name.endsWith(".json")){
-            var reader = new FileReader();
-            data = "";
-            reader.onload = function (e) {
-                var rawContent = e.target.result;
-                data = JSON.parse(rawContent);
-            }
-            reader.readAsText(file);
-            newGame();
-        }
-        else{
-            showError("Upload your downloaded questions or another valid .json file please.");
-            return;
-        }
-    }
-    newGame();
+
+function newGamePlus() {
+    score = 0;
+    round = 0;
+    optionsForm.style.display = "initial";
+    matchfield.style.display = "none";
+    newGameBtn.parentNode.removeChild(newGameBtn);
 }
 
 function saveGame() {
@@ -207,46 +223,12 @@ function deleteGame() {
     localStorage.removeItem("round2play");
 }
 
-function createQuestions() {
+function createQuestions() { //open the question creation menu
     document.getElementById("createQuestions").style.display = "block";
     document.getElementById("optionsForm").style.display = "none";
 }
 
-function goBack() {
-    document.getElementById("createQuestions").style.display = "none";
-    document.getElementById("optionsForm").style.display = "block";
-}
-
-function setCorrectAnswer(selectedAnswer) {
-    resetCorrectAnswer();
-    document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
-    createdCorrect = document.getElementById(selectedAnswer);
-    switch (selectedAnswer) {
-        case ("createA"):
-            createdCorrect = "answerA";
-            break;
-        case ("createB"):
-            createdCorrect = "answerB";
-            break;
-        case ("createC"):
-            createdCorrect = "answerC";
-            break;
-        case ("createD"):
-            createdCorrect = "answerD";
-            break;
-        default:
-            break;
-    }
-}
-
-function resetCorrectAnswer(){
-    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
-}
-
-function createNextQuestion() {
+function createNextQuestion() { //'hack' the link to look like abutton
     if (createdQuestions >= 0) {
         document.getElementById("a").className = "btn btn-warning btn-block";
     }
@@ -271,6 +253,35 @@ function createNextQuestion() {
     }
 }
 
+function setCorrectAnswer(selectedAnswer) {
+    resetCorrectAnswer();
+    document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
+    createdCorrect = document.getElementById(selectedAnswer);
+    switch (selectedAnswer) {
+        case ("createA"):
+            createdCorrect = "answerA";
+            break;
+        case ("createB"):
+            createdCorrect = "answerB";
+            break;
+        case ("createC"):
+            createdCorrect = "answerC";
+            break;
+        case ("createD"):
+            createdCorrect = "answerD";
+            break;
+        default:
+            break;
+    }
+}
+
+function resetCorrectAnswer(){//reset the button color if a new correct answer get selected
+    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+}
+
 function resetCreateQuestionForm() {
     var options = document.getElementById("createQuestionsForm");
     options.elements[0].value = "";
@@ -285,23 +296,14 @@ function resetCreateQuestionForm() {
     document.getElementById("createD").className = "form-control btn-outline-info btn-block";
 }
 
-function downloadQuestions() {
+function downloadQuestions() { // create a json file ut of created questions to download
     var a = document.getElementById("a");
     var file = new Blob(["[" + createdQuestionsArr + "]"], { "text": "json" });
     a.href = URL.createObjectURL(file);
     a.download = "question.json";
 }
 
-function showWarning(message){
-    var alert = document.getElementById("alertWarning");
-    alert.style.display = "block";
-    alert.innerHTML = "<strong>Warning!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
-    exit();
-}
-
-function showError(message){
-    var alert = document.getElementById("alertError");
-    alert.style.display = "block";
-    alert.innerHTML = "<strong>Error!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
-    exit();
+function goBack() { //close create questions menu on click
+    document.getElementById("createQuestions").style.display = "none";
+    document.getElementById("optionsForm").style.display = "block";
 }
