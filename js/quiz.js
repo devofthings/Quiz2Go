@@ -16,18 +16,16 @@ function uploadQuestions() {
             var reader = new FileReader();
             data = "";
             reader.onload = function (e) {
-                var rawContent = e.target.result;
-                data = JSON.parse(rawContent);
+                data = JSON.parse(e.target.result); //parse json into data
+                newGame(data.length);
             }
             reader.readAsText(file);
-            newGame();
         }
         else{
             showError("Upload your downloaded questions or another valid .json file please.");
             return;
         }
     }
-    newGame();
 }
 
 function showWarning(message){ //create custom warning alert
@@ -44,15 +42,9 @@ function showError(message){ //create custom error alert
     exit(); //break code to exit newGame()
 }
 
-function newGame() {
+function newGame(maxRounds) {
     document.getElementById("alertWarning").style.display = "none";
     document.getElementById("alertError").style.display = "none";
-    var options = document.getElementById("optionsForm");
-    //check if form values are valid
-    if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
-        showWarning("Please configure rounds to play & the time to answer with valid positive values > 0.");
-        return;
-    }
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
@@ -61,6 +53,11 @@ function newGame() {
 
 function getOptionValues() { //Get values from the HTML form
     var options = document.getElementById("optionsForm");
+    //check if form values are valid
+    if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
+        showWarning("Please configure rounds to play & the time to answer with valid positive values > 0.");
+        exit(); //break code to exit newGame()
+    }
     if (options.elements[0].value > data.length) {
         options.elements[0].value = data.length;  
         showWarning("You can play only one round per question. I set it to the maximum for you.");
@@ -86,7 +83,6 @@ function createMatchfield() {
 }
 
 function newRound() {
-    console.log(round);
     if (round < rounds2play) {
         locked = false;
         resetButtons();
@@ -186,7 +182,6 @@ function gameOver() {
 
 }
 
-
 function newGamePlus() {
     score = 0;
     round = 0;
@@ -239,10 +234,10 @@ function createNextQuestion() { //'hack' the link to look like abutton
         createdQuestions++;
         resetCreateQuestionForm();
     }
-    else if (options.elements[0].value === "") {
+    else if (options.elements[0].value === "" || options.elements[0].value.startsWith(" ")) {
         showWarning("Please enter a question!");
     }
-    else if (options.elements[1].value === "") {
+    else if (options.elements[1].value === "" || options.elements[0].value.startsWith(" ")) {
         showWarning("You need at least one answer. Start with 'Answer A'.");
     }
     else if(createdCorrect === undefined) {
@@ -285,16 +280,10 @@ function resetCorrectAnswer(){//reset the button color if a new correct answer g
 
 function resetCreateQuestionForm() {
     var options = document.getElementById("createQuestionsForm");
-    options.elements[0].value = "";
-    options.elements[1].value = "";
-    options.elements[2].value = "";
-    options.elements[3].value = "";
-    options.elements[4].value = "";
-    options.elements[0].value = "";
-    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+    for(var i = 0; i < 4; i++){
+        options.elements[i].value = "";
+    }
+    resetCorrectAnswer();
 }
 
 function downloadQuestions() { // create a json file ut of created questions to download
