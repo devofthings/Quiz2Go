@@ -10,9 +10,11 @@ var createdQuestions = 0;
 var createdCorrect;
 
 function newGame() {
+    document.getElementById("alertWarning").style.display = "none";
+    document.getElementById("alertError").style.display = "none";
     var options = document.getElementById("optionsForm");
     if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
-        alert("Please set your configurations");
+        showWarning("Please configure rounds to play & the time to answer with valid positive values > 0.");
         return;
     }
     getOptionValues();
@@ -32,8 +34,8 @@ function newGamePlus() {
 function getOptionValues() { //Get values from the HTML form
     var options = document.getElementById("optionsForm");
     if (options.elements[0].value > data.length) {
-        alert("max one round per question! I will fix it for you.");
-        rounds2play = data.length;
+        options.elements[0].value = data.length;  
+        showWarning("You can play only one round per question. I set it to the maximum for you.");
     }
     else rounds2play = options.elements[0].value;
     time2answer = options.elements[1].value;
@@ -56,6 +58,7 @@ function createMatchfield() {
 }
 
 function newRound() {
+    console.log(round);
     if (round < rounds2play) {
         locked = false;
         resetButtons();
@@ -67,7 +70,7 @@ function newRound() {
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
-        subheadline.innerHTML = "<center>Score: " + score + " Round: " + round + " / " + rounds2play + "</center>";
+        subheadline.innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
     }
     else gameOver();
 }
@@ -126,7 +129,7 @@ function setButtons(question) {
         answerD.style.visibility = "hidden";
     }
     else {
-        alert("INVALID QUESTION!");
+        showError("INVALID QUESTION!");
     }
 }
 
@@ -169,7 +172,7 @@ function uploadQuestions() {
             newGame();
         }
         else{
-            alert("Upload your downloaded questions or another .json file please.");
+            showError("Upload your downloaded questions or another valid .json file please.");
             return;
         }
     }
@@ -178,7 +181,7 @@ function uploadQuestions() {
 
 function saveGame() {
     localStorage.setItem("score", score);
-    localStorage.setItem("round", round - 1);
+    localStorage.setItem("round", round + 1);
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
@@ -188,8 +191,7 @@ function saveGame() {
 function loadGame() {
     loadedStats = true;
     score = localStorage.score;
-    round = 0;
-    round = localStorage.round;
+    round = localStorage.round - 1;
     timeleft = localStorage.timeleft;
     locked = localStorage.locked;
     time2answer = localStorage.time2answer;
@@ -256,16 +258,16 @@ function createNextQuestion() {
         resetCreateQuestionForm();
     }
     else if (options.elements[0].value === "") {
-        alert("Please enter a question!");
+        showWarning("Please enter a question!");
     }
     else if (options.elements[1].value === "") {
-        alert("You need at least one answer. Start with 'Answer A'.");
+        showWarning("You need at least one answer. Start with 'Answer A'.");
     }
     else if(createdCorrect === undefined) {
-        alert("You still need to select an correct answer.");
+        showWarning("You still need to select an correct answer.");
     }
     else {
-        alert("Dafuq did you do? Please consider opening an issue on GitHub.");
+        showError("Dafuq did you do? Please consider opening an issue on GitHub.");
     }
 }
 
@@ -288,4 +290,18 @@ function downloadQuestions() {
     var file = new Blob(["[" + createdQuestionsArr + "]"], { "text": "json" });
     a.href = URL.createObjectURL(file);
     a.download = "question.json";
+}
+
+function showWarning(message){
+    var alert = document.getElementById("alertWarning");
+    alert.style.display = "block";
+    alert.innerHTML = "<strong>Warning!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    exit();
+}
+
+function showError(message){
+    var alert = document.getElementById("alertError");
+    alert.style.display = "block";
+    alert.innerHTML = "<strong>Error!</strong> " + message + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button>";
+    exit();
 }

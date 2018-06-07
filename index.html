@@ -2,21 +2,36 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags for Bootstrap-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <script src="demo.js"></script>
-    <script src="quiz.js"></script>
+    <!-- Bootstrap CSS by Bootstrap (https://github.com/twbs/bootstrap) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/demo.js"></script>
+    <script src="js/quiz.js"></script>
     <title>Editable Web Quiz</title>
 </head>
 
-<body>
+<body id="particles-js">
     <main class="container-fluid">
+        <!--particle.js by Vincent Garreau (https://github.com/VincentGarreau/particles.js)-->
+        <script src="js/particles.min.js"></script>
+        <script src="js/particles-config.js"></script>
+
+        <!--ALERTS-->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertWarning">
+            <strong>Warning!</strong><p>You should check in on some of those fields below.</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertError">
+            <strong>Error!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
             <p class="lead" id="subheadline">
@@ -28,13 +43,13 @@
                 <div class="form-group row">
                     <label for="rounds2play" class="col-sm-2 col-form-label">Rounds to play: </label>
                     <div class="col-sm-10">
-                        <input type="number" min="1" max="100" class="form-control" id="rounds2playForm" placeholder="How many rounds?">
+                        <input type="number" min="1" class="form-control" id="rounds2playForm" placeholder="How many rounds?">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="time2answer" class="col-sm-2 col-form-label">Time to answer: </label>
                     <div class="col-sm-10">
-                        <input type="number" min="1" max="60" class="form-control" id="time2answerForm" placeholder="How many seconds per question?">
+                        <input type="number" min="1" class="form-control" id="time2answerForm" placeholder="How many seconds per question?">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -54,7 +69,7 @@
                         <p class="card-text">By default you play a demo quiz, but you can create your own questions and play with them!</p>                        
                         <div class="form-group row">
                             <label class="col-sm-12" for="uploadFile">Upload your own questions: </label>
-                            <input type="file" class="form-control-file-inline col-sm-12"  id="uploadFile">
+                            <input type="file" class="form-control-file-inline col-sm-12" id="uploadFile">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
@@ -86,7 +101,7 @@
                         <div class="btn btn-outline-primary btn-block" id="answerD" onclick="clickButton(this)">D</div>
                     </div>
                 </div>
-                    <div class="btn btn-outline-warning btn-block btn-sm" onclick="saveGame()">Save Game</div>
+                    <div class="btn btn-outline-warning btn-block btn-sm" onclick="saveGame()">Save Stats</div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="progressbar"></div>
                 </div>
@@ -155,6 +170,8 @@
             <span class="text-muted">made with < /> and <3 by saiij</span>
         </div>
     </footer>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

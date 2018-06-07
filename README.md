@@ -15,8 +15,7 @@ _a editable mc quiz to learn for exams etc._
 - [x] **0.9** extra menu to create questions and answers for the quiz      
 - [ ] **1.0** make it fancy [css] **[dev]**   
 
-#### ToDo:   
-make it DAU-proof   
+#### ToDo:    
 better comments
 add better readme
 
