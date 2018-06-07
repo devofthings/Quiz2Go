@@ -256,6 +256,7 @@ function createNextQuestion() { //'hack' the link to look like abutton
 function setCorrectAnswer(selectedAnswer) {
     resetCorrectAnswer();
     document.getElementById(selectedAnswer).className = "form-control btn-success btn-block";
+    createdCorrect = undefined;
     createdCorrect = document.getElementById(selectedAnswer);
     switch (selectedAnswer) {
         case ("createA"):
