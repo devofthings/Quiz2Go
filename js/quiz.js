@@ -25,7 +25,7 @@ function uploadQuestions() {
             showError("Upload your downloaded questions or another valid .json file please.");
             return;
         }
-    }
+    } else newGame(data.length);
 }
 
 function showWarning(message){ //create custom warning alert
@@ -224,7 +224,7 @@ function createQuestions() { //open the question creation menu
 }
 
 function createNextQuestion() { //'hack' the link to look like abutton
-    if (createdQuestions >= 0) {
+    if (createdQuestions > 0) {
         document.getElementById("a").className = "btn btn-warning btn-block";
     }
 
