@@ -124,35 +124,29 @@ function resetButtons() {
     answerD.className = "btn btn-outline-primary btn-block";
 }
 
+
 function setButtons(question) {
-    if (question.answerA !== "" && question.answerB !== "" && question.answerC !== "" && question.answerD !== "") {
-        answerA.style.visibility = "visible";
-        answerB.style.visibility = "visible";
-        answerC.style.visibility = "visible";
-        answerD.style.visibility = "visible";
+    answerA.style.visibility = "hidden";
+    answerB.style.visibility = "hidden";
+    answerC.style.visibility = "hidden";
+    answerD.style.visibility = "hidden";
+ 
+    if (question.answerA === "") {
+       showError("INVALID QUESTION!");
     }
-    else if (question.answerB === "") {
-        answerA.style.visibility = "visible";
-        answerB.style.visibility = "hidden";
-        answerC.style.visibility = "hidden";
-        answerD.style.visibility = "hidden";
+    if (question.answerA !== "") {
+       answerA.style.visibility = "visible";
     }
-    else if (question.answerC === "") {
-        answerA.style.visibility = "visible";
-        answerB.style.visibility = "visible";
-        answerD.style.visibility = "hidden";
-        answerC.style.visibility = "hidden";
+    if (question.answerB !== "") {
+       answerB.style.visibility = "visible";
     }
-    else if (question.answerD === "") {
-        answerA.style.visibility = "visible";
-        answerB.style.visibility = "visible";
-        answerC.style.visibility = "visible";
-        answerD.style.visibility = "hidden";
-    }
-    else {
-        showError("INVALID QUESTION!");
-    }
-}
+    if (question.answerC !== "") {
+       answerC.style.visibility = "visible";
+    }   
+    if (question.answerD !== "") {
+       answerD.style.visibility = "visible";
+    }   
+ }
 
 function timer() {
     timeleft = time2answer;
