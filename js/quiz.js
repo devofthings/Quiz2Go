@@ -23,7 +23,7 @@ function uploadQuestions() {
         }
         else{
             showError("Upload your downloaded questions or another valid .json file please.");
-            return;
+            exit();
         }
     } else newGame(data.length);
 }
@@ -218,15 +218,13 @@ function createQuestions() { //open the question creation menu
 }
 
 function createNextQuestion() { //'hack' the link to look like abutton
-    if (createdQuestions > 0) {
-        document.getElementById("a").className = "btn btn-warning btn-block";
-    }
-
     var options = document.getElementById("createQuestionsForm");
     if (options.elements[0].value !== "" && options.elements[1].value !== "" && createdCorrect !== undefined) {
         createdQuestionsArr[createdQuestions] = JSON.stringify({ "question": options.elements[0].value, "answerA": options.elements[1].value, "answerB": options.elements[2].value, "answerC": options.elements[3].value, "answerD": options.elements[4].value, "correct": createdCorrect });
-        createdQuestions++;
         resetCreateQuestionForm();
+        removeWarningAndError();
+        createdQuestions++;
+        enableDownloadButton();
     }
     else if (options.elements[0].value === "" || options.elements[0].value.startsWith(" ")) {
         showWarning("Please enter a question!");
@@ -265,19 +263,20 @@ function setCorrectAnswer(selectedAnswer) {
     }
 }
 
-function resetCorrectAnswer(){//reset the button color if a new correct answer get selected
-    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
-    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
-}
-
 function resetCreateQuestionForm() {
     var options = document.getElementById("createQuestionsForm");
     for(var i = 0; i < 4; i++){
         options.elements[i].value = "";
     }
     resetCorrectAnswer();
+}
+
+function resetCorrectAnswer(){//reset the button color if a new correct answer get selected
+    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+    createdCorrect = undefined;
 }
 
 function downloadQuestions() { // create a json file ut of created questions to download
@@ -290,4 +289,17 @@ function downloadQuestions() { // create a json file ut of created questions to 
 function goBack() { //close create questions menu on click
     document.getElementById("createQuestions").style.display = "none";
     document.getElementById("optionsForm").style.display = "block";
+}
+
+function removeWarningAndError(){
+    var warning = document.getElementById("alertWarning");
+    warning.style.display = "none";
+    var error = document.getElementById("alertError");
+    error.style.display = "none";
+}
+
+function enableDownloadButton(){
+    if (createdQuestions >= 2) {
+        document.getElementById("a").className = "btn btn-warning btn-block";
+    }
 }
