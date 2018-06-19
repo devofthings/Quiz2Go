@@ -102,8 +102,8 @@ function newRound() {
         answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
-    }
-    else gameOver();
+    } 
+    else gameOver();    
 }
 
 function clickButton(selectedAnswer) {
