@@ -8,6 +8,9 @@ var savedStats = false;
 var createdQuestionsArr = [];
 var createdQuestions = 0;
 var createdCorrect;
+var dataBackup = data;
+var question;
+var isNewGame = false;
 
 function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
@@ -25,7 +28,7 @@ function uploadQuestions() {
             showError("Upload your downloaded questions or another valid .json file please.");
             return;
         }
-    } else newGame(data.length);
+    } else newGame(dataBackup.length);
 }
 
 function showWarning(message) { //create custom warning alert
@@ -45,6 +48,10 @@ function showError(message) { //create custom error alert
 function newGame(maxRounds) {
     document.getElementById("alertWarning").style.display = "none";
     document.getElementById("alertError").style.display = "none";
+    round = 0;
+    score = 0;
+    savedStats = false;
+    isNewGame = true;
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
@@ -88,7 +95,7 @@ function newRound() {
         resetButtons();
         setButtons(data[round]);
         timer();
-        var question = data[round].question;
+        question = data[round].question;
         answerA.innerHTML = data[round].answerA;
         answerB.innerHTML = data[round].answerB;
         answerC.innerHTML = data[round].answerC;
@@ -154,7 +161,7 @@ function timer() {
         progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
         if (savedStats === true) {
-            clearInterval(timer);
+            clearInterval(timer[0]);
         }
         if (timeleft < 0) {
             clearInterval(timer);
@@ -187,6 +194,7 @@ function newGamePlus() {
 
 function saveGame() {
     savedStats = true;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block";
     document.getElementById("optionsForm").style.display = "block";
     document.getElementById("matchfield").style.display = "none";
     document.getElementById("headline").innerHTML = "Editable Web Quiz";
@@ -196,11 +204,19 @@ function saveGame() {
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
-    localStorage.setItem("round2play", rounds2play); 
+    localStorage.setItem("rounds2play", rounds2play);
 }
 
 function loadGame() {
+    if (loadGameButton.className === "btn btn-outline-success btn-block disabled") {
+        return;
+    }
     savedStats = false;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
+    document.getElementById("optionsForm").style.display = "none";
+    document.getElementById("matchfield").style.display = "block";
+    document.getElementById("headline").innerHTML = "<center>" + question + "</center>";
+    document.getElementById("subheadline").innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
     score = localStorage.score;
     round = localStorage.round - 1;
     timeleft = localStorage.timeleft;
@@ -210,6 +226,7 @@ function loadGame() {
 }
 
 function deleteGame() {
+    savedStats = false;
     localStorage.removeItem("score");
     localStorage.removeItem("round");
     localStorage.removeItem("timeleft");
