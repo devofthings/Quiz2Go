@@ -4,15 +4,18 @@ var timeleft = 0;
 var locked = true;
 var time2answer;
 var rounds2play;
-var loadedStats = false;
+var savedStats = false;
 var createdQuestionsArr = [];
 var createdQuestions = 0;
 var createdCorrect;
+var dataBackup = data;
+var question;
+var isNewGame = false;
 
 function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
     if (file) {
-        if(file.name.endsWith(".json")){ //check if uploaded file is a .json file
+        if (file.name.endsWith(".json")) { //check if uploaded file is a .json file
             var reader = new FileReader();
             data = "";
             reader.onload = function (e) {
@@ -21,21 +24,21 @@ function uploadQuestions() {
             }
             reader.readAsText(file);
         }
-        else{
+        else {
             showError("Upload your downloaded questions or another valid .json file please.");
             exit();
         }
-    } else newGame(data.length);
+    } else newGame(dataBackup.length);
 }
 
-function showWarning(message){ //create custom warning alert
+function showWarning(message) { //create custom warning alert
     var alert = document.getElementById("alertWarning");
     alert.style.display = "block";
     alert.innerHTML = "<center><strong>Warning!</strong> " + message + "</center";
     exit(); //break code to exit newGame()
 }
 
-function showError(message){ //create custom error alert
+function showError(message) { //create custom error alert
     var alert = document.getElementById("alertError");
     alert.style.display = "block";
     alert.innerHTML = "<center><strong>Error!</strong> " + message + "</center";
@@ -45,6 +48,10 @@ function showError(message){ //create custom error alert
 function newGame(maxRounds) {
     document.getElementById("alertWarning").style.display = "none";
     document.getElementById("alertError").style.display = "none";
+    round = 0;
+    score = 0;
+    savedStats = false;
+    isNewGame = true;
     getOptionValues();
     randomizeQuestions();
     createMatchfield();
@@ -54,12 +61,12 @@ function newGame(maxRounds) {
 function getOptionValues() { //Get values from the HTML form
     var options = document.getElementById("optionsForm");
     //check if form values are valid
-    if ((options.elements[0].value === "" || options.elements[0].value <= 0) ||(options.elements[1].value === "" || options.elements[1].value <= 0)){
+    if ((options.elements[0].value === "" || options.elements[0].value <= 0) || (options.elements[1].value === "" || options.elements[1].value <= 0)) {
         showWarning("Please configure rounds to play & the time to answer with valid positive values > 0.");
         exit(); //break code to exit newGame()
     }
     if (options.elements[0].value > data.length) {
-        options.elements[0].value = data.length;  
+        options.elements[0].value = data.length;
         showWarning("You can play only one round per question. I set it to the maximum for you.");
     }
     else rounds2play = options.elements[0].value;
@@ -88,7 +95,7 @@ function newRound() {
         resetButtons();
         setButtons(data[round]);
         timer();
-        var question = data[round].question;
+        question = data[round].question;
         answerA.innerHTML = data[round].answerA;
         answerB.innerHTML = data[round].answerB;
         answerC.innerHTML = data[round].answerC;
@@ -124,29 +131,28 @@ function resetButtons() {
     answerD.className = "btn btn-outline-primary btn-block";
 }
 
-
 function setButtons(question) {
     answerA.style.visibility = "hidden";
     answerB.style.visibility = "hidden";
     answerC.style.visibility = "hidden";
     answerD.style.visibility = "hidden";
- 
+
     if (question.answerA === "") {
-       showError("INVALID QUESTION!");
+        showError("INVALID QUESTION!");
     }
     if (question.answerA !== "") {
-       answerA.style.visibility = "visible";
+        answerA.style.visibility = "visible";
     }
     if (question.answerB !== "") {
-       answerB.style.visibility = "visible";
+        answerB.style.visibility = "visible";
     }
     if (question.answerC !== "") {
-       answerC.style.visibility = "visible";
-    }   
+        answerC.style.visibility = "visible";
+    }
     if (question.answerD !== "") {
-       answerD.style.visibility = "visible";
-    }   
- }
+        answerD.style.visibility = "visible";
+    }
+}
 
 function timer() {
     timeleft = time2answer;
@@ -154,6 +160,9 @@ function timer() {
     var timer = setInterval(function () {
         progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
+        if (savedStats === true) {
+            clearInterval(timer[0]);
+        }
         if (timeleft < 0) {
             clearInterval(timer);
             round++;
@@ -173,7 +182,6 @@ function gameOver() {
     newGameBtn.className = "btn btn-block btn-success"
     newGameBtn.id = "newGameBtn";
     newGameBtn.addEventListener("click", newGamePlus);
-
 }
 
 function newGamePlus() {
@@ -185,16 +193,30 @@ function newGamePlus() {
 }
 
 function saveGame() {
+    savedStats = true;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block";
+    document.getElementById("optionsForm").style.display = "block";
+    document.getElementById("matchfield").style.display = "none";
+    document.getElementById("headline").innerHTML = "Editable Web Quiz";
+    document.getElementById("subheadline").innerHTML = "Welcome to the Quiz! <br> Set your configurations below.";
     localStorage.setItem("score", score);
     localStorage.setItem("round", round + 1);
     localStorage.setItem("timeleft", timeleft);
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
-    localStorage.setItem("round2play", rounds2play);
+    localStorage.setItem("rounds2play", rounds2play);
 }
 
 function loadGame() {
-    loadedStats = true;
+    if (loadGameButton.className === "btn btn-outline-success btn-block disabled") {
+        return;
+    }
+    savedStats = false;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
+    document.getElementById("optionsForm").style.display = "none";
+    document.getElementById("matchfield").style.display = "block";
+    document.getElementById("headline").innerHTML = "<center>" + question + "</center>";
+    document.getElementById("subheadline").innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
     score = localStorage.score;
     round = localStorage.round - 1;
     timeleft = localStorage.timeleft;
@@ -204,6 +226,7 @@ function loadGame() {
 }
 
 function deleteGame() {
+    savedStats = false;
     localStorage.removeItem("score");
     localStorage.removeItem("round");
     localStorage.removeItem("timeleft");
@@ -232,7 +255,7 @@ function createNextQuestion() { //'hack' the link to look like abutton
     else if (options.elements[1].value === "" || options.elements[0].value.startsWith(" ")) {
         showWarning("You need at least one answer. Start with 'Answer A'.");
     }
-    else if(createdCorrect === undefined) {
+    else if (createdCorrect === undefined) {
         showWarning("You still need to select an correct answer.");
     }
     else {
@@ -263,9 +286,16 @@ function setCorrectAnswer(selectedAnswer) {
     }
 }
 
+function resetCorrectAnswer() { //reset the button color if a new correct answer get selected
+    document.getElementById("createA").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createB").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createC").className = "form-control btn-outline-info btn-block";
+    document.getElementById("createD").className = "form-control btn-outline-info btn-block";
+}
+
 function resetCreateQuestionForm() {
     var options = document.getElementById("createQuestionsForm");
-    for(var i = 0; i < 4; i++){
+    for (var i = 0; i < 4; i++) {
         options.elements[i].value = "";
     }
     resetCorrectAnswer();
