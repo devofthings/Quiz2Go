@@ -102,8 +102,8 @@ function newRound() {
         answerD.innerHTML = data[round].answerD;
         headline.innerHTML = "<center>" + question + "</center";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
-    } 
-    else gameOver();    
+    }
+    else gameOver(); 
 }
 
 function clickButton(selectedAnswer) {
@@ -211,18 +211,16 @@ function loadGame() {
     if (loadGameButton.className === "btn btn-outline-success btn-block disabled") {
         return;
     }
-    savedStats = false;
-    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
-    document.getElementById("optionsForm").style.display = "none";
-    document.getElementById("matchfield").style.display = "block";
-    document.getElementById("headline").innerHTML = "<center>" + question + "</center>";
-    document.getElementById("subheadline").innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
     score = localStorage.score;
     round = localStorage.round - 1;
     timeleft = localStorage.timeleft;
     locked = localStorage.locked;
     time2answer = localStorage.time2answer;
-    rounds2play = localStorage.rounds2play;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
+    document.getElementById("optionsForm").style.display = "none";
+    document.getElementById("matchfield").style.display = "block";
+    document.getElementById("headline").innerHTML = "<center>" + question + "</center>";
+    document.getElementById("subheadline").innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
 }
 
 function deleteGame() {
