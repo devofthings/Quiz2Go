@@ -12,6 +12,8 @@ var dataBackup = data;
 var question;
 var isNewGame = false;
 
+var timer_interval = null;
+
 function uploadQuestions() {
     var file = document.getElementById('uploadFile').files[0];
     if (file) {
@@ -94,6 +96,7 @@ function newRound() {
         locked = false;
         resetButtons();
         setButtons(data[round]);
+        savedStats = false;
         timer();
         question = data[round].question;
         answerA.innerHTML = data[round].answerA;
@@ -155,16 +158,15 @@ function setButtons(question) {
 }
 
 function timer() {
-    timeleft = time2answer;
+    if (savedStats === false) {
+        timeleft = time2answer;
+    }
     var progressbar = document.getElementById("progressbar");
-    var timer = setInterval(function () {
+    timer_interval = setInterval(function () {
         progressbar.style.width = (100 / time2answer) * timeleft + "%";
         timeleft--;
-        if (savedStats === true) {
-            clearInterval(timer[0]);
-        }
         if (timeleft < 0) {
-            clearInterval(timer);
+            clearInterval(timer_interval);
             round++;
             newRound();
         }
@@ -205,6 +207,7 @@ function saveGame() {
     localStorage.setItem("locked", locked);
     localStorage.setItem("time2answer", time2answer);
     localStorage.setItem("rounds2play", rounds2play);
+    clearInterval(timer_interval);
 }
 
 function loadGame() {
@@ -221,6 +224,7 @@ function loadGame() {
     document.getElementById("matchfield").style.display = "block";
     document.getElementById("headline").innerHTML = "<center>" + question + "</center>";
     document.getElementById("subheadline").innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
+    timer();
 }
 
 function deleteGame() {
@@ -231,6 +235,8 @@ function deleteGame() {
     localStorage.removeItem("locked");
     localStorage.removeItem("time2answer");
     localStorage.removeItem("round2play");
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
+
 }
 
 function createQuestions() { //open the question creation menu
