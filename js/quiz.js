@@ -36,7 +36,7 @@ function uploadQuestions() {
 function showWarning(message) { //create custom warning alert
     var alert = document.getElementById("alertWarning");
     alert.style.display = "block";
-    alert.innerHTML = "<center><strong>Warning!</strong> " + message + "</center";
+    alert.innerHTML = "<center><strong>Warning!</strong> " + message + "</center>";
     exit(); //break code to exit newGame()
 }
 
@@ -103,7 +103,7 @@ function newRound() {
         answerB.innerHTML = data[round].answerB;
         answerC.innerHTML = data[round].answerC;
         answerD.innerHTML = data[round].answerD;
-        headline.innerHTML = "<center>" + question + "</center";
+        headline.innerHTML = "<center>" + question + "</center>";
         subheadline.innerHTML = "<center>Score: " + score + " Round: " + (1 + round) + " / " + rounds2play + "</center>";
     }
     else gameOver(); 
@@ -174,14 +174,14 @@ function timer() {
 }
 
 function gameOver() {
-    headline.innerHTML = "<center> Game Over! </center";
+    headline.innerHTML = "<center> Game Over! </center>";
     subheadline.innerHTML = "<center> You've scored " + score + " / " + rounds2play + " point(s). </center>";
     matchfield.style.display = "none";
     var newGameBtn = document.createElement("button");
     var t = document.createTextNode("New Game");
     newGameBtn.appendChild(t);
     document.getElementById("jumbo").appendChild(newGameBtn);
-    newGameBtn.className = "btn btn-block btn-success"
+    newGameBtn.className = "btn btn-block btn-success";
     newGameBtn.id = "newGameBtn";
     newGameBtn.addEventListener("click", newGamePlus);
 }
@@ -208,6 +208,16 @@ function saveGame() {
     localStorage.setItem("time2answer", time2answer);
     localStorage.setItem("rounds2play", rounds2play);
     clearInterval(timer_interval);
+}
+
+function exitGame() {
+    savedStats = false;
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block";
+    document.getElementById("optionsForm").style.display = "block";
+    document.getElementById("matchfield").style.display = "none";
+    document.getElementById("headline").innerHTML = "Editable Web Quiz";
+    document.getElementById("subheadline").innerHTML = "Welcome to the Quiz! <br> Set your configurations below.";
+    document.getElementById("loadGameButton").className = "btn btn-outline-success btn-block disabled";
 }
 
 function loadGame() {
