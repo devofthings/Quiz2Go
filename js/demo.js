@@ -56,11 +56,19 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "In which religion is Krishna a god?,
+      "question": "In which religion is Krishna a god?",
       "answerA": "Judaism",
       "answerB": "Christianity",
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "Name of planet after earth ?",
+      "answerA": "Mercurius",
+      "answerB": "Saturn",
+      "answerC": "Mars",
+      "answerD": "Jupiter",
+      "correct": "Venus"
     }
   ];
