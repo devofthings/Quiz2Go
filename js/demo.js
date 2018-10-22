@@ -32,14 +32,6 @@ data = [
       "correct": "answerA"
     },
     {
-      "question": "H20 is the chemical formula for what?",
-      "answerA": "Water",
-      "answerB": "Iron",
-      "answerC": "Gold",
-      "answerD": "Uranium",
-      "correct": "answerA"
-    },
-      {
       "question": "From which language is the word ‘ketchup’ derived?",
       "answerA": "French",
       "answerB": "Malay",
@@ -47,7 +39,7 @@ data = [
       "answerD": "Hindi",
       "correct": "answerB"
     },
-      {
+    {
       "question": "Brie and Camembert are types of which food?",
       "answerA": "Bread",
       "answerB": "Wine",
@@ -55,12 +47,84 @@ data = [
       "answerD": "Meat",
       "correct": "answerC"
     },
-      {
+    {
       "question": "In the popular video game series, what type of animal is Sonic?",
       "answerA": "Dog",
-      "answerB": "Hedgehog",
-      "answerC": "Cat",
-      "answerD": "Anteater",
+      "answerB": "Cat",
+      "answerC": "Hedgehog",
+      "answerD": "Mouse",
+      "correct": "answerC"
+    },
+    {
+      "question": "H2O is the chemical compound for...?",
+      "answerA": "Water",
+      "answerB": "Gold",
+      "answerC": "Uranium",
+      "answerD": "Oxygen",
+      "correct": "answerA"
+    },
+    {
+      "question": "What does the ‘MI’ in ‘MI6’ stand for?",
+      "answerA": "Massive Intellect",
+      "answerB": "Mighty Inc.",
+      "answerC": "Military Intelligence",
+      "answerD": "Manchester Inc.",
+      "correct": "answerC"
+    },
+    {
+      "question": "In which religion is Krishna a god?",
+      "answerA": "Judaism",
+      "answerB": "Christianity",
+      "answerC": "Hinduism",
+      "answerD": "Buddhism",
+      "correct": "answerC"
+    },
+    {
+      "question": "What's the capital of Indonesia?",
+      "answerA": "Bali",
+      "answerB": "Bandung",
+      "answerC": "Surabaya",
+      "answerD": "Jakarta",
+      "correct": "Kuala Lumpur"
+    },
+    {
+      "question": "Whose mother complained about his swearing in the film GoodFellas?",
+      "answerA": "Ray Liotta",
+      "answerB": "Joe Pesci",
+      "answerC": "Robert De Niro",
+      "answerD": "Paul Sorvino",
       "correct": "answerB"
+    },
+    {
+      "question": "What does the Kelvin scale measure?",
+      "answerA": "Height",
+      "answerB": "Toughness",
+      "answerC": "Temperature",
+      "answerD": "Weight",
+      "correct": "answerC"
+    },
+    {
+      "question": "How many strings does a standard guitar have?",
+      "answerA": "2",
+      "answerB": "12",
+      "answerC": "24",
+      "answerD": "6",
+      "correct": "answerD"
+    },
+    {
+      "question": "How did Alice enter Wonderland?",
+      "answerA": "Large Door",
+      "answerB": "Tiny Door",
+      "answerC": "Rabbithole",
+      "answerD": "Window",
+      "correct": "answerC"
+    },
+    {
+      "question": "Who was the final act at Woodstock?",
+      "answerA": "Jimi Hendrix",
+      "answerB": "Janis Joplin",
+      "answerC": "The Who",
+      "answerD": "Joe Cocker",
+      "correct": "answerA"
     }
   ];
