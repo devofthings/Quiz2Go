@@ -1,5 +1,10 @@
 # The Editable Web Quiz
 
+[![GitHub license](https://img.shields.io/github/license/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/blob/master/LICENSE)
+![GitHub release](https://img.shields.io/github/release/saiij/editable-web-quiz.svg)
+![Github All Releases](https://img.shields.io/github/downloads/saiij/editable-web-quiz/total.svg)
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg)
+
 _a editable quiz based on javascript to learn for everything.
 for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
 
