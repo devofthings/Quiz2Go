@@ -270,5 +270,13 @@ data = [
     "answerC": "Private Home Page",
     "answerD": "Personal Home Page",
     "correct": "answerA"
+  },
+  {
+    "question": "What was the original capital of Poland?",
+    "answerA": "Krakow",
+    "answerB": "Warsaw",
+    "answerC": "Poznan",
+    "answerD": "Mazovia",
+    "correct": "answerA"
   }
 ];
