@@ -32,6 +32,22 @@ data = [
       "correct": "answerA"
     },
     {
+      "question": "From which language is the word ‘ketchup’ derived?",
+      "answerA": "French",
+      "answerB": "Malay",
+      "answerC": "English",
+      "answerD": "Hindi",
+      "correct": "answerB"
+    },
+    {
+      "question": "Brie and Camembert are types of which food?",
+      "answerA": "Bread",
+      "answerB": "Wine",
+      "answerC": "Cheese",
+      "answerD": "Meat",
+      "correct": "answerC"
+    },
+    {
       "question": "In the popular video game series, what type of animal is Sonic?",
       "answerA": "Dog",
       "answerB": "Cat",
