@@ -80,6 +80,38 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "Who built the Taj Mahal?",
+      "answerA": "Akbar",
+      "answerB": "1Aurangjeb",
+      "answerC": "Shah Jahan",
+      "answerD": "Jhangir",
+      "correct": "answerC"
+    },
+    {
+      "question": "Who built Fatehpur Sikri?",
+      "answerA": "Akbar",
+      "answerB": "1Aurangjeb",
+      "answerC": "Shah Jahan",
+      "answerD": "Jhangir",
+      "correct": "answerA"
+    },
+    {
+      "question": "Who was the first person to discover the route to India?",
+      "answerA": "Columbus",
+      "answerB": "Marco Polo",
+      "answerC": "Vasco Da gama",
+      "answerD": "Julius Ceaser",
+      "correct": "answerC"
+    },
+    {
+      "question": "Who was the first ruler of the Mauryan Empire?",
+      "answerA": "Bimbisar",
+      "answerB": "Ashoka",
+      "answerC": "Chandragupta Maurya",
+      "answerD": "Gopala",
+      "correct": "answerC"
+    },
+    {
       "question": "What's the capital of Indonesia?",
       "answerA": "Bali",
       "answerB": "Bandung",
