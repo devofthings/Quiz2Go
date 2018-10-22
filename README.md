@@ -4,8 +4,19 @@ _a editable quiz based on javascript to learn for everything.
 for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
 
 ## Features
+
 You can select the rounds to play,
 the time you have to answer per question in seconds and it's also possible to upload and even create your own questions with ease. You can also save, load and delete your stats.
+
+## Setting up & running
+
+```shell
+git clone https://github.com/saiij/editable-web-quiz.git
+cd editable-web-quiz/
+npm install
+# open src/index.html in your default browser e.g.
+open src/index.html
+```
 
 ### Create and download your own Question
 
@@ -20,13 +31,14 @@ Then you set up the rounds to play and time to answer fields and click on 'New G
 At this moment your questions will load and you can learn for everything.
 
 ## Screenshots
-![Ingame Desktop](img/ingame_desktop.png)      
-![Menu Desktop](img/menu_desktop.png)   
-![Menu Mobile](img/menu_mobile_w_custom_alert.png)   
+
+![Ingame Desktop](assets/img/ingame_desktop.png)
+![Menu Desktop](assets/img/menu_desktop.png)
+![Menu Mobile](assets/img/menu_mobile_w_custom_alert.png)
 
 ## Built With
 
-[Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.   
+[Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.
 [particle.js](https://github.com/VincentGarreau/particles.js) - A lightweight JavaScript library for creating particles
 
 ## License
@@ -39,6 +51,7 @@ Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with us
 
 
 ## Contributors
+
 - [Rohit Raj Anand](https://github.com/rht6226)
 - [Praveen Kumar Purushothaman](https://praveen.science/) ([GitHub](https://github.com/praveenscience/) &bull; [Blog](https://blog.praveen.science/))
 - [Victoria Zhong](https://github.com/SemicolonExpected)
