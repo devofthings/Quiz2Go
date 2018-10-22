@@ -32,14 +32,6 @@ data = [
     "correct": "answerA"
   },
   {
-    "question": "Database normalization is the process...",
-    "answerA": " of putting some normal people into a database who can keep things from getting weird.",
-    "answerB": " restructuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.",
-    "answerC": " of trying to improve the read performance of a database, at the expense of losing some write performance, by adding redundant copies of data or by grouping data.",
-    "answerD": " restructuring a non-relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.",
-    "correct": " answerB"
-  },
-  {
     "question": "From which language is the word ‘ketchup’ derived?",
     "answerA": "French",
     "answerB": "Malay",
@@ -149,7 +141,7 @@ data = [
     "answerB": "15th century (1465)",
     "answerC": "16th century (1564)",
     "answerD": "17th century (1695)",
-    "correct": "answerC",
+    "correct": "answerC"
   },
   {
     "question": "What is the percentage of water on Earth?",
@@ -161,11 +153,11 @@ data = [
   },
   {
     "question": "Name of planet after earth ?",
-    "answerA": "Mercurius",
+    "answerA": "Venus",
     "answerB": "Saturn",
     "answerC": "Mars",
     "answerD": "Jupiter",
-    "correct": "Venus"
+    "correct": "answerA"
   },
   {
     "question": "Who built the Taj Mahal?",
@@ -350,5 +342,13 @@ data = [
     "answerC": "It allows you to connect to the Internet via GPS.",
     "answerD": "It allows you to locate your phone if you lose it.",
     "correct": "answerB"
+  },
+  {
+    "question": "What was the original capital of Poland?",
+    "answerA": "Krakow",
+    "answerB": "Warsaw",
+    "answerC": "Poznan",
+    "answerD": "Mazovia",
+    "correct": "answerA"
   }
 ];
