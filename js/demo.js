@@ -120,7 +120,7 @@ data = [
       "correct": "answerD"
     },
     {
-      "question": "What was Google's originally called?,
+      "question": "What was Google's originally called?",
       "answerA": "Googol",
       "answerB": "Backrub",
       "answerC": "Alphabet",
