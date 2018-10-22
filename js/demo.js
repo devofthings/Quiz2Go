@@ -246,5 +246,29 @@ var data = [
     "answerC": "The Who",
     "answerD": "Joe Cocker",
     "correct": "answerA"
+  },
+  {
+    "question": "Who wrote Harry Potter?",
+    "answerA": "Stephanie Dray",
+    "answerB": "J. K. Rowling",
+    "answerC": "Laura Kamoie",
+    "answerD": "A. J. Finn",
+    "correct": "answerB"
+  },
+  {
+    "question": "What was JavaScript originally called?",
+    "answerA": "Action Script",
+    "answerB": "JScript",
+    "answerC": "Browser Script",
+    "answerD": "ECMA Script",
+    "correct": "answerD"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answerA": "PHP: Hypertext Preprocessor",
+    "answerB": "Personal Hypertext Processor",
+    "answerC": "Private Home Page",
+    "answerD": "Personal Home Page",
+    "correct": "answerA"
   }
 ];
