@@ -56,11 +56,51 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "In which religion is Krishna a god?,
+      "question": "In which religion is Krishna a god?",
       "answerA": "Judaism",
       "answerB": "Christianity",
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "Whose mother complained about his swearing in the film GoodFellas?",
+      "answerA": "Ray Liotta",
+      "answerB": "Joe Pesci",
+      "answerC": "Robert De Niro",
+      "answerD": "Paul Sorvino",
+      "correct": "answerB"
+    },
+    {
+      "question": "What does the Kelvin scale measure?",
+      "answerA": "Height",
+      "answerB": "Toughness",
+      "answerC": "Temperature",
+      "answerD": "Weight",
+      "correct": "answerC"
+    },
+    {
+      "question": "How many strings does a standard guitar have?",
+      "answerA": "2",
+      "answerB": "12",
+      "answerC": "24",
+      "answerD": "6",
+      "correct": "answerD"
+    },
+    {
+      "question": "How did Alice enter Wonderland?",
+      "answerA": "Large Door",
+      "answerB": "Tiny Door",
+      "answerC": "Rabbithole",
+      "answerD": "Window",
+      "correct": "answerC"
+    },
+    {
+      "question": "Who was the final act at Woodstock?",
+      "answerA": "Jimi Hendrix",
+      "answerB": "Janis Joplin",
+      "answerC": "The Who",
+      "answerD": "Joe Cocker",
+      "correct": "answerA"
     }
   ];
