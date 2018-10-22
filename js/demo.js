@@ -32,6 +32,22 @@ data = [
       "correct": "answerA"
     },
     {
+      "question": "From which language is the word ‘ketchup’ derived?",
+      "answerA": "French",
+      "answerB": "Malay",
+      "answerC": "English",
+      "answerD": "Hindi",
+      "correct": "answerB"
+    },
+    {
+      "question": "Brie and Camembert are types of which food?",
+      "answerA": "Bread",
+      "answerB": "Wine",
+      "answerC": "Cheese",
+      "answerD": "Meat",
+      "correct": "answerC"
+    },
+    {
       "question": "In the popular video game series, what type of animal is Sonic?",
       "answerA": "Dog",
       "answerB": "Cat",
@@ -95,4 +111,52 @@ data = [
       "answerD": "Gopala",
       "correct": "answerC"
     },
+    {
+      "question": "What's the capital of Indonesia?",
+      "answerA": "Bali",
+      "answerB": "Bandung",
+      "answerC": "Surabaya",
+      "answerD": "Jakarta",
+      "correct": "Kuala Lumpur"
+    },
+    {
+      "question": "Whose mother complained about his swearing in the film GoodFellas?",
+      "answerA": "Ray Liotta",
+      "answerB": "Joe Pesci",
+      "answerC": "Robert De Niro",
+      "answerD": "Paul Sorvino",
+      "correct": "answerB"
+    },
+    {
+      "question": "What does the Kelvin scale measure?",
+      "answerA": "Height",
+      "answerB": "Toughness",
+      "answerC": "Temperature",
+      "answerD": "Weight",
+      "correct": "answerC"
+    },
+    {
+      "question": "How many strings does a standard guitar have?",
+      "answerA": "2",
+      "answerB": "12",
+      "answerC": "24",
+      "answerD": "6",
+      "correct": "answerD"
+    },
+    {
+      "question": "How did Alice enter Wonderland?",
+      "answerA": "Large Door",
+      "answerB": "Tiny Door",
+      "answerC": "Rabbithole",
+      "answerD": "Window",
+      "correct": "answerC"
+    },
+    {
+      "question": "Who was the final act at Woodstock?",
+      "answerA": "Jimi Hendrix",
+      "answerB": "Janis Joplin",
+      "answerC": "The Who",
+      "answerD": "Joe Cocker",
+      "correct": "answerA"
+    }
   ];
