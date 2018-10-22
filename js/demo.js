@@ -62,5 +62,21 @@ data = [
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "What is the correct conversion from inches to meters?".
+      "answerA": "1 inch = 0.003 meters",
+      "answerB": "1 inch = 0.03 meters",
+      "answerC": "1 inch = 0.3 meters",  
+      "answerD": "1 inch = 3 meters",
+      "correct": "answerB"
+    },
+    {
+      "question": "What does the abbreviation OLED stand for?".
+      "answerA": "Odd-Voltage Light Emiting Diode",
+      "answerB": "Ordered Light Emiting Diode",
+      "answerC": "Osfactoric Light Emiting Diode",  
+      "answerD": "Organic Light Emiting Diode",
+      "correct": "answerD"
     }
   ];
