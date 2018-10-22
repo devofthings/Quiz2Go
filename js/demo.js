@@ -270,5 +270,85 @@ data = [
     "answerC": "Private Home Page",
     "answerD": "Personal Home Page",
     "correct": "answerA"
+  },
+  {
+    "question": "What protocol is commonly used for web publishing?",
+    "answerA": "FTP",
+    "answerB": "SMTP",
+    "answerC": "LDAP",
+    "answerD": "IMAP",
+    "correct": "answerA"
+  },
+  {
+    "question": "Which programming language is designed for web scripting?",
+    "answerA": "Java",
+    "answerB": "Ruby",
+    "answerC": "Pascal",
+    "answerD": "Scheme",
+    "correct": "answerB"
+  },
+  {
+    "question": "What is the most common use of a VPS?",
+    "answerA": "Web hosting",
+    "answerB": "Online gaming",
+    "answerC": "Music streaming",
+    "answerD": "Internet chat",
+    "correct": "answerA"
+  },
+  {
+    "question": "An ANR is an error reported by what platform?",
+    "answerA": "Windows",
+    "answerB": "macOS",
+    "answerC": "iOS",
+    "answerD": "Android",
+    "correct": "answerD"
+  },
+  {
+    "question": "Which of the following is considered a microcomputer?",
+    "answerA": "Mainframe",
+    "answerB": "Desktop computer",
+    "answerC": "Smartphone",
+    "answerD": "Smartwatch",
+    "correct": "answerB"
+  },
+  {
+    "question": "Which of the following is a type of VDU?",
+    "answerA": "A/V receiver",
+    "answerB": "Television",
+    "answerC": "Speaker",
+    "answerD": "Gaming console",
+    "correct": "answerB"
+  },
+  {
+    "question": "What type of content does an RSS feed contain?",
+    "answerA": "Images",
+    "answerB": "Videos",
+    "answerC": "Compressed archives",
+    "answerD": "XML-formatted text",
+    "correct": "answerD"
+  },
+  {
+    "question": "What type of software program has a command-line interface?",
+    "answerA": "Web browser",
+    "answerB": "Terminal",
+    "answerC": "Spreadsheet application",
+    "answerD": "Word processor",
+    "correct": "answerB"
+  },
+  {
+    "question": "What is Google's video sharing service called?",
+    "answerA": "YouTube",
+    "answerB": "Play",
+    "answerC": "Gmail",
+    "answerD": "Pixel",
+    "correct": "answerA"
+  },
+  {
+    "question": "What is the purpose of remote access software?",
+    "answerA": "It allows you to access your home security system when you're not home.",
+    "answerB": "It allows you to control a computer from a different location.",
+    "answerC": "It allows you to connect to the Internet via GPS.",
+    "answerD": "It allows you to locate your phone if you lose it.",
+    "correct": "answerB"
   }
 ];
