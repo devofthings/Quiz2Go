@@ -40,3 +40,4 @@ Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with us
 
 ## Contributors
 - [Rohit Raj Anand](https://github.com/rht6226)
+- [Praveen Kumar Purushothaman](https://praveen.science/) ([GitHub](https://github.com/praveenscience/) &bull; [Blog](https://blog.praveen.science/))
