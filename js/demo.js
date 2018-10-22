@@ -80,6 +80,14 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "What is the percentage of water on Earth?",
+      "answerA": "56",
+      "answerB": "80",
+      "answerC": "71",
+      "answerD": "60",
+      "correct": "answerC"
+    },
+    {
       "question": "Name of planet after earth ?",
       "answerA": "Mercurius",
       "answerB": "Saturn",
