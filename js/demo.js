@@ -56,11 +56,19 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "In which religion is Krishna a god?,
+      "question": "In which religion is Krishna a god?",
       "answerA": "Judaism",
       "answerB": "Christianity",
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
-    }
+    },
+    {
+      "question": "What's the capital of Indonesia?",
+      "answerA": "Bali",
+      "answerB": "Bandung",
+      "answerC": "Surabaya",
+      "answerD": "Jakarta",
+      "correct": "Kuala Lumpur"
+    },
   ];
