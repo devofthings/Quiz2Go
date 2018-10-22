@@ -350,5 +350,13 @@ data = [
     "answerC": "Poznan",
     "answerD": "Mazovia",
     "correct": "answerA"
+  },
+  {
+    "question": "What is the sum from 0 to 100 (0 + 1 + ... + 49 + 50 + 51 + ... + 99 + 100)?",
+    "answerA": "5050",
+    "answerB": "5051",
+    "answerC": "5052",
+    "answerD": "5053",
+    "correct": "answerA"
   }
 ];
