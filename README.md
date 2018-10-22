@@ -37,3 +37,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with useful random knowledge.
 
+
+## Contributors
+- [Rohit Raj Anand](https://github.com/rht6226)
