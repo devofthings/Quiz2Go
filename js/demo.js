@@ -56,7 +56,7 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "In which religion is Krishna a god?,
+      "question": "In which religion is Krishna a god?",
       "answerA": "Judaism",
       "answerB": "Christianity",
       "answerC": "Hinduism",
