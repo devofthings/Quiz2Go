@@ -62,5 +62,21 @@ data = [
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "What was Google's originally called?,
+      "answerA": "Googol",
+      "answerB": "Backrub",
+      "answerC": "Alphabet",
+      "answerD": "Google",
+      "correct": "answerB"
+    },
+    {
+      "question": "Which is the most pirated Software?,
+      "answerA": "Adobe Photoshop",
+      "answerB": "Winzip",
+      "answerC": "MSOffice",
+      "answerD": "Steam",
+      "correct": "answerC"
     }
   ];
