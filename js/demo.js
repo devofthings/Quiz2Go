@@ -62,5 +62,21 @@ data = [
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "In Tolkien's Middle Earth, What Sindarin word was Aragorn known by when he was a child?",
+      "answerA": "Estel - meaning "hope" or "trust"",
+      "answerB": "Amdir - meaning "looking up"",
+      "answerC": "Aeluin - meaning "blue lake"",
+      "answerD": "Míriel - meaning "sparkling like jewels"",
+      "correct": "answerA"
+    },
+    {
+      "question": "In Tolkien's Middle Earth, What do the Elves call the Hobbits?",
+      "answerA": "The Mellon",
+      "answerB": "The Periannath",
+      "answerC": "The Onodrim",
+      "answerD": "The Urulóki",
+      "correct": "answerB"
     }
   ];
