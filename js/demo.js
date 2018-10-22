@@ -56,11 +56,19 @@ data = [
       "correct": "answerC"
     },
     {
-      "question": "In which religion is Krishna a god?,
+      "question": "In which religion is Krishna a god?",
       "answerA": "Judaism",
       "answerB": "Christianity",
       "answerC": "Hinduism",
       "answerD": "Buddhism",
       "correct": "answerC"
+    },
+    {
+      "question": "Which airport has IATA code of BHD?",
+      "answerA": "Baghdad International Airport",
+      "answerB": "George Best Belfast City Airport",
+      "answerC": "Berlin Brandenburg Airport",
+      "answerD": "Hancock County-Bar Harbor Airport",
+      "correct": "answerB"
     }
   ];
