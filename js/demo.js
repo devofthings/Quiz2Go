@@ -70,5 +70,13 @@ data = [
       "answerC": "Berlin Brandenburg Airport",
       "answerD": "Hancock County-Bar Harbor Airport",
       "correct": "answerB"
+    },
+    {
+      "question": "Which century was William Shakespeare born?",
+      "answerA": "14th century (1396)",
+      "answerB": "15th century (1465)",
+      "answerC": "16th century (1564)",
+      "answerD": "17th century (1695)",
+      "correct": "answerC"
     }
   ];
