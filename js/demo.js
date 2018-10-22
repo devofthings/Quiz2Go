@@ -80,6 +80,22 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "What was Google's originally called?,
+      "answerA": "Googol",
+      "answerB": "Backrub",
+      "answerC": "Alphabet",
+      "answerD": "Google",
+      "correct": "answerB"
+    },
+    {
+      "question": "Which is the most pirated Software?,
+      "answerA": "Adobe Photoshop",
+      "answerB": "Winzip",
+      "answerC": "MSOffice",
+      "answerD": "Steam",
+      "correct": "answerC"
+    },
+    {
       "question": "Which airport has IATA code of BHD?",
       "answerA": "Baghdad International Airport",
       "answerB": "George Best Belfast City Airport",
