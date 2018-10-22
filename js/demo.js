@@ -64,6 +64,14 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "What's the capital of Indonesia?",
+      "answerA": "Bali",
+      "answerB": "Bandung",
+      "answerC": "Surabaya",
+      "answerD": "Jakarta",
+      "correct": "Kuala Lumpur"
+    },
+    {
       "question": "Whose mother complained about his swearing in the film GoodFellas?",
       "answerA": "Ray Liotta",
       "answerB": "Joe Pesci",
