@@ -80,6 +80,22 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "In Tolkien's Middle Earth, What Sindarin word was Aragorn known by when he was a child?",
+      "answerA": "Estel - meaning 'hope' or 'trust'",
+      "answerB": "Amdir - meaning 'looking up'",
+      "answerC": "Aeluin - meaning 'blue lake'",
+      "answerD": "Míriel - meaning 'sparkling like jewels'",
+      "correct": "answerA"
+    },
+    {
+      "question": "In Tolkien's Middle Earth, What do the Elves call the Hobbits?",
+      "answerA": "The Mellon",
+      "answerB": "The Periannath",
+      "answerC": "The Onodrim",
+      "answerD": "The Urulóki",
+      "correct": "answerB"
+    },
+    {
       "question": "What is the correct conversion from inches to meters?".
       "answerA": "1 inch = 0.003 meters",
       "answerB": "1 inch = 0.03 meters",
