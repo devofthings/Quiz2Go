@@ -1,4 +1,4 @@
-var data = [
+data = [
   {
     "question": "What or who is 'Dracula vampira'?",
     "answerA": "person",
