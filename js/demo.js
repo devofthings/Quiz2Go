@@ -30,5 +30,13 @@ data = [
       "answerC": "",
       "answerD": "",
       "correct": "answerA"
+    },
+    {
+      "question": "Database normalization is the process...",
+      "answerA": " of putting some normal people into a database who can keep things from getting weird.",
+      "answerB": " restructuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.",
+      "answerC": " of trying to improve the read performance of a database, at the expense of losing some write performance, by adding redundant copies of data or by grouping data.",
+      "answerD": " restructuring a non-relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity.",
+      "correct": " answerB"
     }
   ];
