@@ -80,6 +80,14 @@ data = [
       "correct": "answerC"
     },
     {
+      "question": "Name of planet after earth ?",
+      "answerA": "Mercurius",
+      "answerB": "Saturn",
+      "answerC": "Mars",
+      "answerD": "Jupiter",
+      "correct": "Venus"
+    },
+    {
       "question": "Who built the Taj Mahal?",
       "answerA": "Akbar",
       "answerB": "1Aurangjeb",
