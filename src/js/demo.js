@@ -366,5 +366,69 @@ data = [
     "answerC": "England",
     "answerD": "Uruguay",
     "correct": "answerA"
+  },
+  {
+    "question": "Which one is correct team name in NBA?",
+    "answerA": "New York Bulls",
+    "answerB": "Los Angeles Kings",
+    "answerC": "Golden State Warriros",
+    "answerD": "Huston Rocket",
+    "correct": "answerD"
+  },
+  {
+    "question": "How many stars are on the US flag?",
+    "answerA": "47",
+    "answerB": "50",
+    "answerC": "20",
+    "answerD": "39",
+    "correct": "answerB"
+  },
+  {
+    "question": "How many stars are on the US flag?",
+    "answerA": "Kanchenjunga",
+    "answerB": "Everest",
+    "answerC": "Chimborazo",
+    "answerD": "Makalu",
+    "correct": "answerC"
+  },
+  {
+    "question": "How many symphonies did beethoven compose?",
+    "answerA": "5",
+    "answerB": "9",
+    "answerC": "23",
+    "answerD": "124",
+    "correct": "answerB"
+  },
+  {
+    "question": "What does a light-year measure?",
+    "answerA": "Brightness",
+    "answerB": "Time",
+    "answerC": "Distance",
+    "answerD": "Weight",
+    "correct": "answerC"
+  },
+  {
+    "question": "Which of these elements is needed to make nuclear energy and nuclear weapons?",
+    "answerA": "Sodium chloride",
+    "answerB": "Uranium",
+    "answerC": "Nitrogen",
+    "answerD": "Carbon dioxide",
+    "correct": "answerB"
+  },
+  {
+    "question": "What is the official language of Brazil?",
+    "answerA": "English",
+    "answerB": "spanish",
+    "answerC": "German",
+    "answerD": "portuguese",
+    "correct": "answerD"
+  },
+  {
+    "question": "How many goals in a hatrick?",
+    "answerA": "1",
+    "answerB": "2",
+    "answerC": "3",
+    "answerD": "4",
+    "correct": "answerC"
   }
 ];

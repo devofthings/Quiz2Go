@@ -56,3 +56,4 @@ Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with us
 - [Praveen Kumar Purushothaman](https://praveen.science/) ([GitHub](https://github.com/praveenscience/) &bull; [Blog](https://blog.praveen.science/))
 - [Victoria Zhong](https://github.com/SemicolonExpected)
 - [Susan Truong](https://github.com/susantruong)
+- [Khaled Touaibia](https://github.com/KhaledTouaibia)
