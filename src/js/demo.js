@@ -429,7 +429,7 @@ data = [
     "answerC": "20",
     "answerD": "39",
     "correct": "answerB",
-    "category": "general knowledge"
+    "category": "knowledge"
   },
   {
     "question": "What is the highest Mountain in the World",
@@ -474,7 +474,7 @@ data = [
     "answerC": "German",
     "answerD": "portuguese",
     "correct": "answerD",
-    "category": "general knowledge"
+    "category": "knowledge"
   },
   {
     "question": "How many goals in a hatrick?",
