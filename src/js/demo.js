@@ -171,6 +171,14 @@ data = [
     "category": "knowledge"
   },
   {
+  "question": "Who was the first female Prime Minister of a European country?",
+  "answerA": "Margaret Thatcher",
+  "answerB": "Sirimavo Bandaranaike",
+  "answerC": "Elisabeth Domitien",
+  "answerD": "Isabel Martinez de Peron",
+
+  },
+  {
     "question": "Name of planet after earth ?",
     "answerA": "Venus",
     "answerB": "Saturn",
