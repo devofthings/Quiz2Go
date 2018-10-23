@@ -42,3 +42,4 @@ Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with us
 - [Rohit Raj Anand](https://github.com/rht6226)
 - [Praveen Kumar Purushothaman](https://praveen.science/) ([GitHub](https://github.com/praveenscience/) &bull; [Blog](https://blog.praveen.science/))
 - [Victoria Zhong](https://github.com/SemicolonExpected)
+- [Susan Truong](https://github.com/susantruong)
