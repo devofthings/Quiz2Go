@@ -420,5 +420,95 @@ data = [
     "answerD": "Uruguay",
     "correct": "answerA",
     "category": "sports"
+  },
+  {
+    "question": "Which city is best known as Big Apple?",
+    "answerA": "Rio de Janeiro",
+    "answerB": "Paris",
+    "answerC": "London",
+    "answerD": "New York",
+    "correct": "answerD",
+    "category": "geography"
+  },
+  {
+    "question": "Which famous composer although being completly deaf still composed one of the most admired works of his time?",
+    "answerA": "Ludwig van Beethoven",
+    "answerB": "Wolfgang Amadeus Mozart",
+    "answerC": "Johann Sebastian Bach",
+    "answerD": "Niccolò Paganini",
+    "correct": "answerA",
+    "category": "music"
+   },
+   {
+    "question": "Which one is correct team name in NBA?",
+    "answerA": "New York Bulls",
+    "answerB": "Los Angeles Kings",
+    "answerC": "Golden State Warriros",
+    "answerD": "Huston Rocket",
+    "correct": "answerD",
+    "category": "sports"
+  },
+  {
+    "question": "How many stars are on the US flag?",
+    "answerA": "47",
+    "answerB": "50",
+    "answerC": "20",
+    "answerD": "39",
+    "correct": "answerB",
+    "category": "knowledge"
+  },
+  {
+    "question": "What is the highest Mountain in the World",
+    "answerA": "Kanchenjunga",
+    "answerB": "Everest",
+    "answerC": "Chimborazo",
+    "answerD": "Makalu",
+    "correct": "answerC",
+    "category": "geography"
+  },
+  {
+    "question": "How many symphonies did beethoven compose?",
+    "answerA": "5",
+    "answerB": "9",
+    "answerC": "23",
+    "answerD": "124",
+    "correct": "answerB",
+    "category": "music"
+  },
+  {
+    "question": "What does a light-year measure?",
+    "answerA": "Brightness",
+    "answerB": "Time",
+    "answerC": "Distance",
+    "answerD": "Weight",
+    "correct": "answerC",
+    "category": "physics"
+  },
+  {
+    "question": "Which of these elements is needed to make nuclear energy and nuclear weapons?",
+    "answerA": "Sodium chloride",
+    "answerB": "Uranium",
+    "answerC": "Nitrogen",
+    "answerD": "Carbon dioxide",
+    "correct": "answerB",
+    "category": "physics"
+  },
+  {
+    "question": "What is the official language of Brazil?",
+    "answerA": "English",
+    "answerB": "spanish",
+    "answerC": "German",
+    "answerD": "portuguese",
+    "correct": "answerD",
+    "category": "knowledge"
+  },
+  {
+    "question": "How many goals in a hatrick?",
+    "answerA": "1",
+    "answerB": "2",
+    "answerC": "3",
+    "answerD": "4",
+    "correct": "answerC",
+    "category": "sports"
   }
 ];
