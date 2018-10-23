@@ -412,5 +412,23 @@ data = [
     "answerD": "Uruguay",
     "correct": "answerA",
     "category": "sports"
+  },
+  {
+    "question": "Which city is best known as Big Apple?",
+    "answerA": "Rio de Janeiro",
+    "answerB": "Paris",
+    "answerC": "London",
+    "answerD": "New York",
+    "correct": "answerD",
+    "category": "geography"
+  },
+  {
+    "question": "Which famous composer although being completly deaf still composed one of the most admired works of his time?",
+    "answerA": "Ludwig van Beethoven",
+    "answerB": "Wolfgang Amadeus Mozart",
+    "answerC": "Johann Sebastian Bach",
+    "answerD": "Niccolò Paganini",
+    "correct": "answerA",
+    "category": "music"
   }
 ];
