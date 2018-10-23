@@ -19,11 +19,9 @@
         <strong>Warning!</strong><p>You should check in on some of those fields below.</p>
     </div>
     <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertError">
-        <strong>Error!</strong> You should check in on some of those fields below.
+        <strong>Error!</strong><p>You should check in on some of those fields below.</p>
     </div>
     <main class="container-fluid">
-        <script src="js/particles.min.js"></script>
-        <script src="js/particles-config.js"></script>
         <div class="jumbotron-fluid" id="jumbo">
             <h1 class="display-4" id="headline">Editable Web Quiz</h1>
             <p class="lead" id="subheadline">
@@ -51,21 +49,21 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-12">
-                        <div class="btn btn-outline-success btn-block disabled" id="loadGameButton" onclick="loadGame()">Resume Game</div>
+                        <div class="btn btn-outline-success btn-block disabled" id="loadGameButton" onclick="loadGame()">ResumeGame</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%">
                     <div class="card-body">
                         <h5 class="card-title">Advanced Options</h5>
                         <h6 class="card-subtitle mb-2 text-muted">the real magic happens here</h6>
-                        <p class="card-text">By default you play a demo quiz, but you can create your own questions and play with them!</p>                        
+                        <p class="card-text">By default you play a demo quiz, but you can create your own questions and play with them!</p>
                         <div class="form-group row">
                             <label class="col-sm-12" for="uploadFile">Upload your own questions: </label>
                             <input type="file" class="form-control-file-inline col-sm-12" id="uploadFile" accept=".json">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <div class="btn btn-outline-info btn-block" onclick="createQuestions()">Create Questions</div>
+                                <div class="btn btn-outline-info btn-block" onclick="createQuestions()">CreateQuestions</div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -93,7 +91,7 @@
                         <div class="btn btn-outline-primary btn-block" id="answerD" onclick="clickButton(this)">D</div>
                     </div>
                 </div>
-                    <div class="btn btn-outline-warning btn-block btn-sm" onclick="saveGame()">Exit</div>
+                <div class="btn btn-outline-warning btn-block btn-sm" onclick="saveGame()">Exit</div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="progressbar"></div>
                 </div>
@@ -113,43 +111,49 @@
                             <br> 7. Download your questions.
                         </p>
                         <form id="createQuestionsForm">
-                        <div class="form-group row">
-                            <label for="createQuestion" class="col-sm-2 col-form-label">Question: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="createQuestion" placeholder="Insert Question here">
+                            <div class="form-group row">
+                                <label for="createQuestion" class="col-sm-2 col-form-label">Question: </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="createQuestion" placeholder="Insert Question here">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                    <input type="text" class="form-control btn-outline-info btn-block" id="createA" placeholder="Answer A" ondblclick="setCorrectAnswer(id)">
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createA"
+                                        placeholder="Answer A" ondblclick="setCorrectAnswer(id)">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createB"
+                                        placeholder="Answer B" ondblclick="setCorrectAnswer(id)">
+                                </div>
                             </div>
-                            <div class="col-6">
-                                    <input type="text" class="form-control btn-outline-info btn-block" id="createB" placeholder="Answer B" ondblclick="setCorrectAnswer(id)">
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createC"
+                                        placeholder="Answer C" ondblclick="setCorrectAnswer(id)">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control btn-outline-info btn-block" id="createD"
+                                        placeholder="Answer D" ondblclick="setCorrectAnswer(id)">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                    <input type="text" class="form-control btn-outline-info btn-block" id="createC" placeholder="Answer C" ondblclick="setCorrectAnswer(id)">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <div class="btn btn-info btn-block" onclick="createNextQuestion(createQuestion, createA, createB, createC, createD)">
+                                        Add Question </div>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                    <input type="text" class="form-control btn-outline-info btn-block" id="createD" placeholder="Answer D" ondblclick="setCorrectAnswer(id)">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <a class="btn btn-warning btn-block disabled" id="a" onclick="downloadQuestions()"
+                                        role="button" aria-disabled="true">Download Questions</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                    <div class="btn btn-info btn-block" onclick="createNextQuestion(createQuestion, createA, createB, createC, createD)"> Add Question </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <div class="btn btn-dark btn-block" onclick="goBack()">Back</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <a class="btn btn-warning btn-block disabled" id="a" onclick="downloadQuestions()" role="button" aria-disabled="true">Download Questions</a>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <div class="btn btn-dark btn-block" onclick="goBack()">Back</div>
-                            </div>
-                        </div>
                     </div>
                     </form>
                 </div>
@@ -159,11 +163,13 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">made with < /> and <3 by saiij</span>
+            <span class="text-muted">made with &lt; &frasl;&gt; and &lt;3 by saiij</span>
         </div>
     </footer>
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/particles.js/particles.js"></script>
+    <script src="js/particles-config.js"></script>
 </body>
 
 </html>
