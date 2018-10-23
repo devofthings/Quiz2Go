@@ -5,7 +5,8 @@ data = [
     "answerB": "plant",
     "answerC": "animal",
     "answerD": "club",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "knowledge"
   },
   {
     "question": "How many people live in France (2017)",
@@ -13,7 +14,8 @@ data = [
     "answerB": "110 mio",
     "answerC": "67 mio",
     "answerD": "",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "history"
   },
   {
     "question": "What's the capital of Azerbaijan?",
@@ -21,7 +23,8 @@ data = [
     "answerB": "Baka",
     "answerC": "",
     "answerD": "",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "geography"
   },
   {
     "question": "This quiz is...",
@@ -29,7 +32,8 @@ data = [
     "answerB": "",
     "answerC": "",
     "answerD": "",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "misc"
   },
   {
     "question": "From which language is the word ‘ketchup’ derived?",
@@ -37,7 +41,8 @@ data = [
     "answerB": "Malay",
     "answerC": "English",
     "answerD": "Hindi",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "hostory"
   },
   {
     "question": "Brie and Camembert are types of which food?",
@@ -45,7 +50,8 @@ data = [
     "answerB": "Wine",
     "answerC": "Cheese",
     "answerD": "Meat",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "food"
   },
   {
     "question": "In the popular video game series, what type of animal is Sonic?",
@@ -53,7 +59,8 @@ data = [
     "answerB": "Cat",
     "answerC": "Hedgehog",
     "answerD": "Mouse",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "gaming"
   },
   {
     "question": "H2O is the chemical compound for...?",
@@ -61,7 +68,8 @@ data = [
     "answerB": "Gold",
     "answerC": "Uranium",
     "answerD": "Oxygen",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "chemistry"
   },
   {
     "question": "What does the ‘MI’ in ‘MI6’ stand for?",
@@ -69,7 +77,8 @@ data = [
     "answerB": "Mighty Inc.",
     "answerC": "Military Intelligence",
     "answerD": "Manchester Inc.",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "movies"
   },
   {
     "question": "In which religion is Krishna a god?",
@@ -77,7 +86,8 @@ data = [
     "answerB": "Christianity",
     "answerC": "Hinduism",
     "answerD": "Buddhism",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "religion"
   },
   {
     "question": "In Tolkien's Middle Earth, What Sindarin word was Aragorn known by when he was a child?",
@@ -85,7 +95,8 @@ data = [
     "answerB": "Amdir - meaning 'looking up'",
     "answerC": "Aeluin - meaning 'blue lake'",
     "answerD": "Míriel - meaning 'sparkling like jewels'",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "fiction"
   },
   {
     "question": "In Tolkien's Middle Earth, What do the Elves call the Hobbits?",
@@ -93,7 +104,8 @@ data = [
     "answerB": "The Periannath",
     "answerC": "The Onodrim",
     "answerD": "The Urulóki",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "fiction"
   },
   {
     "question": "What is the correct conversion from inches to meters?",
@@ -101,7 +113,8 @@ data = [
     "answerB": "1 inch = 0.03 meters",
     "answerC": "1 inch = 0.3 meters",  
     "answerD": "1 inch = 3 meters",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "knowledge"
   },
   {
     "question": "What does the abbreviation OLED stand for?",
@@ -109,7 +122,8 @@ data = [
     "answerB": "Ordered Light Emiting Diode",
     "answerC": "Osfactoric Light Emiting Diode",  
     "answerD": "Organic Light Emiting Diode",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "knowledge"
   },
   {
     "question": "What was Google's originally called?",
@@ -117,7 +131,8 @@ data = [
     "answerB": "Backrub",
     "answerC": "Alphabet",
     "answerD": "Google",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "knowledge"
   },
   {
     "question": "Which is the most pirated Software?",
@@ -125,7 +140,8 @@ data = [
     "answerB": "Winzip",
     "answerC": "MSOffice",
     "answerD": "Steam",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "computers"
   },
   {
     "question": "Which airport has IATA code of BHD?",
@@ -133,7 +149,8 @@ data = [
     "answerB": "George Best Belfast City Airport",
     "answerC": "Berlin Brandenburg Airport",
     "answerD": "Hancock County-Bar Harbor Airport",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "knowledge"
   },
   {
     "question": "Which century was William Shakespeare born?",
@@ -141,7 +158,8 @@ data = [
     "answerB": "15th century (1465)",
     "answerC": "16th century (1564)",
     "answerD": "17th century (1695)",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "history"
   },
   {
     "question": "What is the percentage of water on Earth?",
@@ -149,7 +167,8 @@ data = [
     "answerB": "80",
     "answerC": "71",
     "answerD": "60",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "knowledge"
   },
   {
     "question": "Name of planet after earth ?",
@@ -157,7 +176,8 @@ data = [
     "answerB": "Saturn",
     "answerC": "Mars",
     "answerD": "Jupiter",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "knowledge"
   },
   {
     "question": "Who built the Taj Mahal?",
@@ -165,7 +185,8 @@ data = [
     "answerB": "1Aurangjeb",
     "answerC": "Shah Jahan",
     "answerD": "Jhangir",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "history"
   },
   {
     "question": "Who built Fatehpur Sikri?",
@@ -173,7 +194,8 @@ data = [
     "answerB": "1Aurangjeb",
     "answerC": "Shah Jahan",
     "answerD": "Jhangir",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "history"
   },
   {
     "question": "Who was the first person to discover the route to India?",
@@ -181,7 +203,8 @@ data = [
     "answerB": "Marco Polo",
     "answerC": "Vasco Da gama",
     "answerD": "Julius Ceaser",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "history"
   },
   {
     "question": "Who was the first ruler of the Mauryan Empire?",
@@ -189,7 +212,8 @@ data = [
     "answerB": "Ashoka",
     "answerC": "Chandragupta Maurya",
     "answerD": "Gopala",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "history"
   },
   {
     "question": "What's the capital of Indonesia?",
@@ -197,7 +221,8 @@ data = [
     "answerB": "Bandung",
     "answerC": "Surabaya",
     "answerD": "Jakarta",
-    "correct": "Kuala Lumpur"
+    "correct": "Kuala Lumpur",
+    "category": "geography"
   },
   {
     "question": "Whose mother complained about his swearing in the film GoodFellas?",
@@ -205,7 +230,8 @@ data = [
     "answerB": "Joe Pesci",
     "answerC": "Robert De Niro",
     "answerD": "Paul Sorvino",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "movies"
   },
   {
     "question": "What does the Kelvin scale measure?",
@@ -213,7 +239,8 @@ data = [
     "answerB": "Toughness",
     "answerC": "Temperature",
     "answerD": "Weight",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "knowledge"
   },
   {
     "question": "How many strings does a standard guitar have?",
@@ -221,7 +248,8 @@ data = [
     "answerB": "12",
     "answerC": "24",
     "answerD": "6",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "knowledge"
   },
   {
     "question": "How did Alice enter Wonderland?",
@@ -229,7 +257,8 @@ data = [
     "answerB": "Tiny Door",
     "answerC": "Rabbithole",
     "answerD": "Window",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "fiction"
   },
   {
     "question": "Who was the final act at Woodstock?",
@@ -237,7 +266,8 @@ data = [
     "answerB": "Janis Joplin",
     "answerC": "The Who",
     "answerD": "Joe Cocker",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "history"
   },
   {
     "question": "Who wrote Harry Potter?",
@@ -245,7 +275,8 @@ data = [
     "answerB": "J. K. Rowling",
     "answerC": "Laura Kamoie",
     "answerD": "A. J. Finn",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "knowledge"
   },
   {
     "question": "What was JavaScript originally called?",
@@ -253,7 +284,8 @@ data = [
     "answerB": "JScript",
     "answerC": "Browser Script",
     "answerD": "ECMA Script",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "computers"
   },
   {
     "question": "What does PHP stand for?",
@@ -261,7 +293,8 @@ data = [
     "answerB": "Personal Hypertext Processor",
     "answerC": "Private Home Page",
     "answerD": "Personal Home Page",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "computers"
   },
   {
     "question": "What protocol is commonly used for web publishing?",
@@ -269,7 +302,8 @@ data = [
     "answerB": "SMTP",
     "answerC": "LDAP",
     "answerD": "IMAP",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "computers"
   },
   {
     "question": "Which programming language is designed for web scripting?",
@@ -277,7 +311,8 @@ data = [
     "answerB": "Ruby",
     "answerC": "Pascal",
     "answerD": "Scheme",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "computers"
   },
   {
     "question": "What is the most common use of a VPS?",
@@ -285,7 +320,8 @@ data = [
     "answerB": "Online gaming",
     "answerC": "Music streaming",
     "answerD": "Internet chat",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "computers"
   },
   {
     "question": "An ANR is an error reported by what platform?",
@@ -293,7 +329,8 @@ data = [
     "answerB": "macOS",
     "answerC": "iOS",
     "answerD": "Android",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "computers"
   },
   {
     "question": "Which of the following is considered a microcomputer?",
@@ -301,7 +338,8 @@ data = [
     "answerB": "Desktop computer",
     "answerC": "Smartphone",
     "answerD": "Smartwatch",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "computers"
   },
   {
     "question": "Which of the following is a type of VDU?",
@@ -309,7 +347,8 @@ data = [
     "answerB": "Television",
     "answerC": "Speaker",
     "answerD": "Gaming console",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "computers"
   },
   {
     "question": "What type of content does an RSS feed contain?",
@@ -317,7 +356,8 @@ data = [
     "answerB": "Videos",
     "answerC": "Compressed archives",
     "answerD": "XML-formatted text",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "computers"
   },
   {
     "question": "What type of software program has a command-line interface?",
@@ -325,7 +365,8 @@ data = [
     "answerB": "Terminal",
     "answerC": "Spreadsheet application",
     "answerD": "Word processor",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "computers"
   },
   {
     "question": "What is Google's video sharing service called?",
@@ -333,7 +374,8 @@ data = [
     "answerB": "Play",
     "answerC": "Gmail",
     "answerD": "Pixel",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "computers"
   },
   {
     "question": "What is the purpose of remote access software?",
@@ -341,7 +383,8 @@ data = [
     "answerB": "It allows you to control a computer from a different location.",
     "answerC": "It allows you to connect to the Internet via GPS.",
     "answerD": "It allows you to locate your phone if you lose it.",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "computers"
   },
   {
     "question": "What was the original capital of Poland?",
@@ -349,7 +392,8 @@ data = [
     "answerB": "Warsaw",
     "answerC": "Poznan",
     "answerD": "Mazovia",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "geography"
   },
   {
     "question": "What is the sum from 0 to 100 (0 + 1 + ... + 49 + 50 + 51 + ... + 99 + 100)?",
@@ -357,7 +401,8 @@ data = [
     "answerB": "5051",
     "answerC": "5052",
     "answerD": "5053",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "mathematics"
   },
   {
     "question": "Which country has won the most FIFA world cups?",
@@ -365,6 +410,7 @@ data = [
     "answerB": "France",
     "answerC": "England",
     "answerD": "Uruguay",
-    "correct": "answerA"
+    "correct": "answerA",
+    "category": "sports"
   }
 ];
