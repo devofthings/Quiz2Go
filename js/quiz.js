@@ -159,18 +159,18 @@ function setButtons(question) {
 
 function timer() {
     if (savedStats === false) {
-        timeleft = time2answer;
+        timeleft = 100 * time2answer;
     }
     var progressbar = document.getElementById("progressbar");
     timer_interval = setInterval(function () {
-        progressbar.style.width = (100 / time2answer) * timeleft + "%";
+        progressbar.style.width = (1 / time2answer) * timeleft + "%";
         timeleft--;
         if (timeleft < 0) {
             clearInterval(timer_interval);
             round++;
             newRound();
         }
-    }, 1000);
+    }, 10);
 }
 
 function gameOver() {
