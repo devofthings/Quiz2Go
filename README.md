@@ -8,8 +8,11 @@
 &nbsp;
 [![GitHub forks](https://img.shields.io/github/forks/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/network)
 
-_An editable quiz based on javascript to learn for everything.
-for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
+_An editable quiz based on javascript to learn for everything._
+> 
+*  for mobile and desktop enviorments 
+*  1 to 4 answer Buttons 
+*  100% offline! (after setup)
 
 ## Features
 
@@ -26,13 +29,17 @@ npm install
 open src/index.html
 ```
 
-### Create and download your own Question
+## Contributing
+
+Please follow our [Contribution Guidelines](./CONTRIBUTING.md).
+
+## Create and download your own questions
 
 To create your own questions you click on the 'Create Question' button.
 Type in a question and at least one answer and then select the correct answer with a double tap. As next, you click on the 'Add Question' button to save the question.
 If you have at least two questions saved, the download button becomes enabled and you can download your questions.
 
-### Use your own questions
+## Use your own questions
 
 To use your own questions you just need to select them via the 'Browse...'-button.
 Then you set up the rounds to play and time to answer fields and click on 'New Game'.
@@ -46,12 +53,8 @@ At this moment your questions will load and you can learn for everything.
 
 ## Built With
 
-[Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.
+[Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.     
 [particle.js](https://github.com/VincentGarreau/particles.js) - A lightweight JavaScript library for creating particles
-
-## Contributing
-
-Please follow our [Contribution Guidelines](./CONTRIBUTING.md).
 
 ## License
 
@@ -68,3 +71,4 @@ Special thanks to [Nordiii](https://github.com/Nordiii) for providing me with us
 - [Praveen Kumar Purushothaman](https://praveen.science/) ([GitHub](https://github.com/praveenscience/) &bull; [Blog](https://blog.praveen.science/))
 - [Victoria Zhong](https://github.com/SemicolonExpected)
 - [Susan Truong](https://github.com/susantruong)
+- [Khaled Touaibia](https://github.com/KhaledTouaibia)
