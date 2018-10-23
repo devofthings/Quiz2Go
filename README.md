@@ -1,6 +1,11 @@
 # The Editable Web Quiz
 
-_a editable quiz based on javascript to learn for everything.
+[![GitHub license](https://img.shields.io/github/license/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/blob/master/LICENSE)
+![GitHub release](https://img.shields.io/github/release/saiij/editable-web-quiz.svg)
+[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](https://github.com/saiij/editable-web-quiz/issues)
+
+
+_An editable quiz based on javascript to learn for everything.
 for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
 
 ## Features
@@ -8,13 +13,13 @@ for mobile and desktop enviorments. 1 to 4 answer Buttons. 100% offline!_
 You can select the rounds to play,
 the time you have to answer per question in seconds and it's also possible to upload and even create your own questions with ease. You can also save, load and delete your stats.
 
-## Setting up & running
+## Setting up & Running
 
 ```shell
 git clone https://github.com/saiij/editable-web-quiz.git
 cd editable-web-quiz/
 npm install
-# open src/index.html in your default browser e.g.
+# Open src/index.html in your default browser e.g.
 open src/index.html
 ```
 
