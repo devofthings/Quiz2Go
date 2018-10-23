@@ -41,6 +41,10 @@ At this moment your questions will load and you can learn for everything.
 [Bootstrap 4](https://github.com/twbs/bootstrap) - Framework for developing responsive, mobile first projects on the web.
 [particle.js](https://github.com/VincentGarreau/particles.js) - A lightweight JavaScript library for creating particles
 
+## Contributing
+
+Please follow our [Contribution Guidelines](./CONTRIBUTING.md).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
