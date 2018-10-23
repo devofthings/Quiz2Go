@@ -373,7 +373,8 @@ data = [
     "answerB": "Los Angeles Kings",
     "answerC": "Golden State Warriros",
     "answerD": "Huston Rocket",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "sport"
   },
   {
     "question": "How many stars are on the US flag?",
@@ -381,15 +382,17 @@ data = [
     "answerB": "50",
     "answerC": "20",
     "answerD": "39",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "general knowledge"
   },
   {
-    "question": "How many stars are on the US flag?",
+    "question": "What is the highest Mountain in the World",
     "answerA": "Kanchenjunga",
     "answerB": "Everest",
     "answerC": "Chimborazo",
     "answerD": "Makalu",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "geography"
   },
   {
     "question": "How many symphonies did beethoven compose?",
@@ -397,7 +400,8 @@ data = [
     "answerB": "9",
     "answerC": "23",
     "answerD": "124",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "music"
   },
   {
     "question": "What does a light-year measure?",
@@ -405,7 +409,8 @@ data = [
     "answerB": "Time",
     "answerC": "Distance",
     "answerD": "Weight",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "physics"
   },
   {
     "question": "Which of these elements is needed to make nuclear energy and nuclear weapons?",
@@ -413,7 +418,8 @@ data = [
     "answerB": "Uranium",
     "answerC": "Nitrogen",
     "answerD": "Carbon dioxide",
-    "correct": "answerB"
+    "correct": "answerB",
+    "category": "physics"
   },
   {
     "question": "What is the official language of Brazil?",
@@ -421,7 +427,8 @@ data = [
     "answerB": "spanish",
     "answerC": "German",
     "answerD": "portuguese",
-    "correct": "answerD"
+    "correct": "answerD",
+    "category": "general knowledge"
   },
   {
     "question": "How many goals in a hatrick?",
@@ -429,6 +436,7 @@ data = [
     "answerB": "2",
     "answerC": "3",
     "answerD": "4",
-    "correct": "answerC"
+    "correct": "answerC",
+    "category": "sport"
   }
 ];
