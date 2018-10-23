@@ -176,7 +176,7 @@ data = [
   "answerB": "Sirimavo Bandaranaike",
   "answerC": "Elisabeth Domitien",
   "answerD": "Isabel Martinez de Peron",
-
+  "category": "politics",
   },
   {
     "question": "Name of planet after earth ?",
