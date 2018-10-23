@@ -6,7 +6,7 @@ data = [
     "answerC": "animal",
     "answerD": "club",
     "correct": "answerB",
-    "category": "fiction"
+    "category": "knowledge"
   },
   {
     "question": "How many people live in France (2017)",
