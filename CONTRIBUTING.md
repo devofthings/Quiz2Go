@@ -50,3 +50,15 @@ By contributing, you agree that your contributions will be licensed under its MI
 
 ## References
 This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/a9316a723f9e918afde44dea68b5f9f39b7d9b00/CONTRIBUTING.md)
+
+## Categories
+Some categories have been added. This list might need to be changed/solidified/tidied in a bit when more questions are added.
+  1. computers
+  2. geography
+  3. mathematics
+  4. sports
+  5. history
+  6. religion
+  7. food
+  8. knowledge
+  9. fiction
