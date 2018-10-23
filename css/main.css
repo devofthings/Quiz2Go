@@ -36,6 +36,11 @@ canvas {
 #createQuestions{
   display: none;
 }
+
+.progress-bar {
+  transition: width 1s linear; 
+}
+
 .footer {
   position: fixed;
   z-index: 1000;
