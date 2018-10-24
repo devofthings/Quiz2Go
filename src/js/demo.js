@@ -510,5 +510,14 @@ data = [
     "answerD": "4",
     "correct": "answerC",
     "category": "sports"
+  },
+  {
+    "question": "Who created React.js?",
+    "answerA": "Google",
+    "answerB": "Facebook",
+    "answerC": "Twitter",
+    "answerD": "Brendan Eich",
+    "correct": "answerB",
+    "category": "computer"
   }
 ];
