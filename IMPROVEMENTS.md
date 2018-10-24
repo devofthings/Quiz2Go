@@ -1,7 +1,7 @@
 # IMPROVEMENTS
 
 ### MISSING FEATURES:
-- [ ] Missing Feature
+
 - [ ] Ability to create a profile for a player
 - [ ] Ability to compare the score with the other players
 - [ ] Allow the quiz to get the questions from a local server
@@ -9,6 +9,7 @@
 - [ ] Custom Background: Could add an option to change background color or even different background options. Maybe an option to upload your own. 
 
 ### BUGS:
+
 - [ ] Quiz Freeze: Sometimes the test will hang after answering a question wrong instead of ending the quiz.
 
 ### FEEDBACK:
