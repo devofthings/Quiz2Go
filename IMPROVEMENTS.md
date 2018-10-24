@@ -7,6 +7,8 @@
 - [ ] Allow the quiz to get the questions from a local server
 - [ ] Allow the creation of sets of questions (With a common subject)
 - [ ] Custom Background: Could add an option to change background color or even different background options. Maybe an option to upload your own. 
+- [ ] Provide a template for users so they know the format for uploading their own questions
+- [ ] Along with player profile, keep track of player's high score or quickest response times
 
 ### BUGS:
 
