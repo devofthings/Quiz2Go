@@ -10,6 +10,7 @@
 - [ ] Provide a template for users so they know the format for uploading their own questions
 - [ ] Along with player profile, keep track of player's high score or quickest response times
 - [ ] Ability to see which answers were wrong/right
+- [ ] Navigate among the questions
 
 ### BUGS:
 
@@ -23,3 +24,4 @@
 - [ ] The form moves around a lot when entering information.
 - [ ] The client does not scale correctly to higher res displays (mine is 3k and only about half my screen is filled with content)
 - [ ] It is not obvious what the "Delete Savegame" does
+- [ ] Timer slider should go from left to right because most people read from left to right and tracking time gets hard from right to left.
