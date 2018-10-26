@@ -17,6 +17,7 @@
 - [ ] Quiz Freeze: Sometimes the test will hang after answering a question wrong instead of ending the quiz.
 - [ ] After answering some questions wrong, the next question will not appear until the timer times out
 - [ ] Some questions are too long for the answerfield and so not readable
+- [ ] Some answers are too long for the container and overflow out
 
 ### FEEDBACK:
 
