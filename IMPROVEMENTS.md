@@ -26,3 +26,5 @@
 - [ ] The client does not scale correctly to higher res displays (mine is 3k and only about half my screen is filled with content)
 - [ ] It is not obvious what the "Delete Savegame" does
 - [ ] Timer slider should go from left to right because most people read from left to right and tracking time gets hard from right to left.
+- [ ] The timer filling up animation unnecessarily grabs the user's attention for a second or two. It is a fast movement from left to right so it is hard not to get distracted by it. I would prefer if it was rendered as filled and started decreasing slowly.
+- [ ] The quizzes can be more structured. IMO a quiz having different number of options for every question would look frustrating, it would be better to enforce some rules.
