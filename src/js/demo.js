@@ -574,4 +574,13 @@ data = [
     "correct": "answerC",
     "category": "computer"
   }
+  {
+    "question": "Where is the Statue of Liberty originally from?",
+    "answerA": "Germany",
+    "answerB": "USA",
+    "answerC": "France",
+    "answerD": "Italy",
+    "correct": "answerC",
+    "category": "geography"
+},
 ];

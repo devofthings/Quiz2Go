@@ -11,6 +11,7 @@
 - [ ] Along with player profile, keep track of player's high score or quickest response times
 - [ ] Ability to see which answers were wrong/right
 - [ ] Navigate among the questions
+- [ ] Correct answer pop up page after correct answer that tells you the amount of points earned
 
 ### BUGS:
 
