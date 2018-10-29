@@ -583,4 +583,22 @@ data = [
     "correct": "answerC",
     "category": "geography"
 },
+  {
+    "question": "Which is the shallowest and the coldest ocean?",
+    "answerA": "Antarctic ocean",
+    "answerB": "Atlantic ocean",
+    "answerC": "Arctic ocean",
+    "answerD": "Pacific ocean",
+    "correct": "answerC",
+    "category": "geography"
+},
+   {
+    "question": "How many players are there in an ice hockey team?",
+    "answerA": "6",
+    "answerB": "7",
+    "answerC": "8",
+    "answerD": "9",
+    "correct": "answerA",
+    "category": "sports"
+},
 ];
