@@ -572,8 +572,16 @@ data = [
     "answerC": "Mark Elliot Zuckerberg",
     "answerD": "Brendan Eich",
     "correct": "answerC",
-    "category": "computer"
-  }
+  },
+  {
+    "question": "Which organ produces bile?",
+    "answerA": "Pancreas",
+    "answerB": "Liver",
+    "answerC": "Gallbladder",
+    "answerD": "Heart",
+    "correct": "answerB",
+    "category": "biology"
+  },
   {
     "question": "Where is the Statue of Liberty originally from?",
     "answerA": "Germany",
@@ -582,7 +590,7 @@ data = [
     "answerD": "Italy",
     "correct": "answerC",
     "category": "geography"
-},
+  },
   {
     "question": "Which is the shallowest and the coldest ocean?",
     "answerA": "Antarctic ocean",
@@ -591,8 +599,8 @@ data = [
     "answerD": "Pacific ocean",
     "correct": "answerC",
     "category": "geography"
-},
-   {
+  },
+  {
     "question": "How many players are there in an ice hockey team?",
     "answerA": "6",
     "answerB": "7",
@@ -600,5 +608,5 @@ data = [
     "answerD": "9",
     "correct": "answerA",
     "category": "sports"
-},
+  }
 ];
