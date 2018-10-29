@@ -572,7 +572,6 @@ data = [
     "answerC": "Mark Elliot Zuckerberg",
     "answerD": "Brendan Eich",
     "correct": "answerC",
-    "category": "computer"
   },
   {
     "question": "Which organ produces bile?",
@@ -583,4 +582,13 @@ data = [
     "correct": "answerB",
     "category": "biology"
   },
+  {
+    "question": "Where is the Statue of Liberty originally from?",
+    "answerA": "Germany",
+    "answerB": "USA",
+    "answerC": "France",
+    "answerD": "Italy",
+    "correct": "answerC",
+    "category": "geography"
+  }
 ];
