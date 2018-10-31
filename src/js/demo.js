@@ -615,7 +615,8 @@ data = [
     "answerB": "Shanghai",
 	"answerC": "Shenzhen",
 	"answerD": "Beijing",
-	"correct": "answerD"
+	"correct": "answerD",
+	"category": "geography"
   },
   {
 	"question": "Which city is the largest city in Canada?",
@@ -623,7 +624,8 @@ data = [
 	"answerB": "Toronto",
     "answerC": "Ottawa",
 	"answerD": "Vancouver",
-	"correct": "answerB"
+	"correct": "answerB",
+	"category": "geography"
   },
   {
 	"question": "Where is Huron lake?",
@@ -631,6 +633,7 @@ data = [
 	"answerB": "US",
 	"answerC": "Canada",
 	"answerD": "US-Canada",
-	"correct": "answerD"
+	"correct": "answerD",
+	"category": "geography"
   }
 ];
