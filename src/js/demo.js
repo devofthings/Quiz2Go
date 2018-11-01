@@ -651,7 +651,16 @@ data = [
     answerB: "Great Pyramid at Giza",
     answerC: "The Statue of Zeus at Olympia",
     answerD: "The Hanging Gardens of Babylon",
-    correct: "Great Wall of China",
+    correct: "AnswerA",
     category: "knowledge"
+  },
+  {
+    "question": "What is the most watched sport in the world",
+    "answerA": "football",
+    "answerB": "Tennis",
+    "answerC": "Cricket",
+    "answerD": "Soccer",
+    "correct": "answerD",
+    "category": "sports"
   }
 ];
