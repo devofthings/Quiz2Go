@@ -644,5 +644,14 @@ data = [
     "answerD": "Sodium chloride",
     "correct": "Sodium bicarbonate",
     "category": "knowledge"
+  },
+  {
+    question:"which one of the following was NOT an original 7 wonder of the world?",
+    answerA: "Great Wall of China",
+    answerB: "Great Pyramid at Giza",
+    answerC: "The Statue of Zeus at Olympia",
+    answerD: "The Hanging Gardens of Babylon",
+    correct: "Great Wall of China",
+    category: "knowledge"
   }
 ];
