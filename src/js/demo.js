@@ -610,6 +610,33 @@ data = [
     "category": "sports"
   },
   {
+	"question": "What's the capital of China?",
+	"answerA": "Hongkong",
+  "answerB": "Shanghai",
+	"answerC": "Shenzhen",
+	"answerD": "Beijing",
+	"correct": "answerD",
+	"category": "geography"
+  },
+  {
+	"question": "Which city is the largest city in Canada?",
+	"answerA": "Montreal",
+	"answerB": "Toronto",
+  "answerC": "Ottawa",
+	"answerD": "Vancouver",
+	"correct": "answerB",
+	"category": "geography"
+  },
+  {
+	"question": "Where is Huron lake?",
+	"answerA": "Russia",
+	"answerB": "US",
+	"answerC": "Canada",
+	"answerD": "US-Canada",
+	"correct": "answerD",
+	"category": "geography"
+  },
+  {
     "question": "When did the first Harry Potter book published?",
     "answerA": "1992",
     "answerB": "1997",
