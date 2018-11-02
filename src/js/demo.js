@@ -612,7 +612,7 @@ data = [
   {
 	"question": "What's the capital of China?",
 	"answerA": "Hongkong",
-    "answerB": "Shanghai",
+    	"answerB": "Shanghai",
 	"answerC": "Shenzhen",
 	"answerD": "Beijing",
 	"correct": "answerD",
@@ -622,7 +622,7 @@ data = [
 	"question": "Which city is the largest city in Canada?",
 	"answerA": "Montreal",
 	"answerB": "Toronto",
-    "answerC": "Ottawa",
+    	"answerC": "Ottawa",
 	"answerD": "Vancouver",
 	"correct": "answerB",
 	"category": "geography"
