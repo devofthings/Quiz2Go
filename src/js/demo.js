@@ -1,4 +1,4 @@
-data = [  
+data = [
   {
     "question": "Which League of Legends team has won the most World Championships",
     "answerA": "SKT",
@@ -120,7 +120,7 @@ data = [
     "question": "What is the correct conversion from inches to meters?",
     "answerA": "1 inch = 0.003 meters",
     "answerB": "1 inch = 0.03 meters",
-    "answerC": "1 inch = 0.3 meters",  
+    "answerC": "1 inch = 0.3 meters",
     "answerD": "1 inch = 3 meters",
     "correct": "answerB",
     "category": "knowledge"
@@ -129,7 +129,7 @@ data = [
     "question": "What does the abbreviation OLED stand for?",
     "answerA": "Odd-Voltage Light Emiting Diode",
     "answerB": "Ordered Light Emiting Diode",
-    "answerC": "Osfactoric Light Emiting Diode",  
+    "answerC": "Osfactoric Light Emiting Diode",
     "answerD": "Organic Light Emiting Diode",
     "correct": "answerD",
     "category": "knowledge"
@@ -612,7 +612,7 @@ data = [
   {
 	"question": "What's the capital of China?",
 	"answerA": "Hongkong",
-    	"answerB": "Shanghai",
+  "answerB": "Shanghai",
 	"answerC": "Shenzhen",
 	"answerD": "Beijing",
 	"correct": "answerD",
@@ -622,7 +622,7 @@ data = [
 	"question": "Which city is the largest city in Canada?",
 	"answerA": "Montreal",
 	"answerB": "Toronto",
-    	"answerC": "Ottawa",
+  "answerC": "Ottawa",
 	"answerD": "Vancouver",
 	"correct": "answerB",
 	"category": "geography"
@@ -635,5 +635,41 @@ data = [
 	"answerD": "US-Canada",
 	"correct": "answerD",
 	"category": "geography"
+  },
+  {
+    "question": "When did the first Harry Potter book published?",
+    "answerA": "1992",
+    "answerB": "1997",
+    "answerC": "2001",
+    "answerD": "1999",
+    "correct": "1997",
+    "category": "knowledge"
+  },
+  {
+    "question": "Who is best known as the inventor the world wide web?",
+    "answerA": "Alan Turing",
+    "answerB": "Vint Cerf",
+    "answerC": "Nikola Tesla",
+    "answerD": "Bill Gates",
+    "correct": "Tim Berners Lee",
+    "category": "knowledge"
+  },
+  {
+    "question": "Which 1997 film stars Nicolas Cage, John Cusack, and John Malkovich?",
+    "answerA": "In the Line of Fire",
+    "answerB": "Pushing Tin",
+    "answerC": "Face Off",
+    "answerD": "The Rock",
+    "correct": "Con Air",
+    "category": "knowledge"
+  },
+  {
+    "question": "Ordinary table salt is sodium chloride. What is baking soda?",
+    "answerA": "Potassium chloride",
+    "answerB": "Potassium carbonate",
+    "answerC": "Potassium hydroxide",
+    "answerD": "Sodium chloride",
+    "correct": "Sodium bicarbonate",
+    "category": "knowledge"
   }
 ];
