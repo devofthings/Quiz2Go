@@ -671,5 +671,32 @@ data = [
     "answerD": "Sodium chloride",
     "correct": "Sodium bicarbonate",
     "category": "knowledge"
+  },
+  {
+    question:"which one of the following was NOT an original 7 wonder of the world?",
+    answerA: "Great Wall of China",
+    answerB: "Great Pyramid at Giza",
+    answerC: "The Statue of Zeus at Olympia",
+    answerD: "The Hanging Gardens of Babylon",
+    correct: "AnswerA",
+    category: "knowledge"
+  },
+  {
+    "question": "What is the most watched sport in the world",
+    "answerA": "football",
+    "answerB": "Tennis",
+    "answerC": "Cricket",
+    "answerD": "Soccer",
+    "correct": "answerD",
+    "category": "sports"
+  },
+  {
+    "question": "What yead did World War 1 begin",
+    "answerA": "1917",
+    "answerB": "1910",
+    "answerC": "1914",
+    "answerD": "1918",
+    "correct": "answerC",
+    "category": "history"
   }
 ];
