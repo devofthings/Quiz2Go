@@ -1,12 +1,12 @@
 # The Editable Web Quiz
 &nbsp;
-[![GitHub license](https://img.shields.io/github/license/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/devofthings/quiz2go.svg)](https://github.com/devofthings/quiz2go/blob/master/LICENSE)
 &nbsp; 
-![GitHub release](https://img.shields.io/github/release/saiij/editable-web-quiz.svg)
+![GitHub release](https://img.shields.io/github/release/devofthings/quiz2go.svg)
 &nbsp; 
-[![GitHub issues](https://img.shields.io/github/issues/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/issues)
+[![GitHub issues](https://img.shields.io/github/issues/devofthings/quiz2go.svg)](https://github.com/devofthings/quiz2go/issues)
 &nbsp;
-[![GitHub forks](https://img.shields.io/github/forks/saiij/editable-web-quiz.svg)](https://github.com/saiij/editable-web-quiz/network)
+[![GitHub forks](https://img.shields.io/github/forks/devofthings/quiz2go.svg)](https://github.com/devofthings/quiz2go/network)
 
 _An editable quiz based on javascript to learn for everything._
 > 
