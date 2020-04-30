@@ -14,7 +14,7 @@
   "homepage": "https://github.com/saiij/editable-web-quiz#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "particles.js": "^2.0.0"
   }
 }
